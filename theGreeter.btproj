@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4" project_name="theGreeter">
+    <include path="theGreeter.xml"/>
+    <!-- Description of Node Models (used by Groot) -->
+    <TreeNodesModel>
+        <Action ID="Drive_to_parking_position" editable="true"/>
+        <Action ID="Drive_to_point" editable="true">
+            <input_port name="info_point_name"/>
+            <input_port name="info_point_position"/>
+        </Action>
+        <Condition ID="Has_person_been_recognized" editable="true"/>
+        <Action ID="Notify" editable="true"/>
+        <Action ID="Set_Robot_to_Sleep" editable="true"/>
+        <Action ID="Tell_about_info_point" editable="true">
+            <input_port name="info_point_name"/>
+        </Action>
+        <Action ID="Turn" editable="true">
+            <input_port name="rotation_amount"/>
+        </Action>
+        <Action ID="Wake_up_robot" editable="true"/>
+    </TreeNodesModel>
+</root>

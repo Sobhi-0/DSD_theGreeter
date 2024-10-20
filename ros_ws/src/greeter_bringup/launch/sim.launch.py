@@ -7,6 +7,11 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
+
+    apriltag_config = os.path.join(
+        get_package_share_directory("greeter_bringup"), "config", "apriltag_config.yaml"
+    )
+
     ld = LaunchDescription()
     ld.add_action(
         IncludeLaunchDescription(
@@ -18,6 +23,23 @@ def generate_launch_description():
                     "/robot_description.launch.py",
                 ]
             )
+        )
+    )
+    ld.add_action(
+        Node(
+            package="image_proc",
+            executable="image_proc",
+            name="apriltag_node",
+            output="screen",
+        )
+    )
+    ld.add_action(
+        Node(
+            package="apriltag_ros",
+            executable="apriltag_node",
+            name="apriltag_node",
+            output="screen",
+            parameters=[apriltag_config],
         )
     )
     return ld

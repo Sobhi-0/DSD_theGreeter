@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y \
   ros-humble-xacro \
   ros-humble-joint-state-publisher-gui \
   ros-humble-robot-state-publisher \
+  ros-humble-apriltag-ros \
+  ros-humble-image-proc \
+  ros-humble-robot-localization \
+  ros-humble-tf2-tools \
   python3-pip \
   sudo \
   ros-dev-tools

@@ -1,18 +1,18 @@
-FROM ros:humble-ros-core
+FROM ros:jazzy-ros-core
 
 # List of packages to install
 RUN apt-get update && apt-get install -y \
   vim \
   git \
-  ros-humble-nav2-bringup \
-  ros-humble-navigation2 \
-  ros-humble-xacro \
-  ros-humble-joint-state-publisher-gui \
-  ros-humble-robot-state-publisher \
-  ros-humble-apriltag-ros \
-  ros-humble-image-proc \
-  ros-humble-robot-localization \
-  ros-humble-tf2-tools \
+  ros-jazzy-nav2-bringup \
+  ros-jazzy-navigation2 \
+  ros-jazzy-xacro \
+  ros-jazzy-joint-state-publisher-gui \
+  ros-jazzy-robot-state-publisher \
+  ros-jazzy-apriltag-ros \
+  ros-jazzy-image-proc \
+  ros-jazzy-robot-localization \
+  ros-jazzy-tf2-tools \
   python3-pip \
   sudo \
   ros-dev-tools
@@ -31,7 +31,7 @@ RUN usermod -aG sudo jos
 
 # Change ownership of the workspace to the new user
 RUN chown -R jos:jos /ros_ws
-RUN echo "source /opt/ros/humble/setup.bash" >> /home/jos/.bashrc
+RUN echo "source /opt/ros/jazzy/setup.bash" >> /home/jos/.bashrc
 
 
 # install dependencies from sphero-sdk

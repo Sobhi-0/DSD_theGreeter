@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
 # Create workspace
 RUN mkdir /ros_ws
 
-RUN python3 -m pip install --upgrade pip
+# RUN python3 -m pip install --upgrade pip
 
 # Add a new user with the same UID and GID as the host user
 ARG USER_ID

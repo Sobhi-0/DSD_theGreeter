@@ -25,13 +25,14 @@ RUN python3 -m pip install --upgrade pip
 # Add a new user with the same UID and GID as the host user
 ARG USER_ID
 ARG GROUP_ID
-RUN groupadd -g ${GROUP_ID} jos && \
-  useradd -m -u ${USER_ID} -g jos jos
-RUN usermod -aG sudo jos
+ARG USER_NAME
+RUN groupadd -g ${GROUP_ID} ${USER_NAME} && \
+  useradd -m -u ${USER_ID} -g ${USER_NAME} ${USER_NAME}
+RUN usermod -aG sudo ${USER_NAME}
 
 # Change ownership of the workspace to the new user
-RUN chown -R jos:jos /ros_ws
-RUN echo "source /opt/ros/jazzy/setup.bash" >> /home/jos/.bashrc
+RUN chown -R ${USER_NAME}:${USER_NAME} /ros_ws
+RUN echo "source /opt/ros/jazzy/setup.bash" >> /home/${USER_NAME}/.bashrc
 
 
 # install dependencies from sphero-sdk
@@ -40,7 +41,7 @@ RUN echo "source /opt/ros/jazzy/setup.bash" >> /home/jos/.bashrc
 # RUN source ~/.profile
 
 # Switch to the new user
-USER jos
+USER ${USER_NAME}
 WORKDIR /ros_ws
 
 ENTRYPOINT ["/bin/bash"]

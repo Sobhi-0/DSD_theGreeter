@@ -1,18 +1,21 @@
-FROM ros:jazzy-ros-core
+FROM ros:humble-ros-base
 
 # List of packages to install
 RUN apt-get update && apt-get install -y \
   vim \
   git \
-  ros-jazzy-nav2-bringup \
-  ros-jazzy-navigation2 \
-  ros-jazzy-xacro \
-  ros-jazzy-joint-state-publisher-gui \
-  ros-jazzy-robot-state-publisher \
-  ros-jazzy-apriltag-ros \
-  ros-jazzy-image-proc \
-  ros-jazzy-robot-localization \
-  ros-jazzy-tf2-tools \
+  ros-humble-nav2-bringup \
+  ros-humble-navigation2 \
+  ros-humble-xacro \
+  ros-humble-joint-state-publisher-gui \
+  ros-humble-robot-state-publisher \
+  ros-humble-apriltag-ros \
+  ros-humble-image-proc \
+  ros-humble-robot-localization \
+  ros-humble-tf2-tools \
+  ros-humble-rviz2 \
+  ros-humble-rqt \
+  ros-humble-rqt-common-plugins \
   python3-pip \
   sudo \
   ros-dev-tools
@@ -32,7 +35,7 @@ RUN usermod -aG sudo ${USER_NAME}
 
 # Change ownership of the workspace to the new user
 RUN chown -R ${USER_NAME}:${USER_NAME} /ros_ws
-RUN echo "source /opt/ros/jazzy/setup.bash" >> /home/${USER_NAME}/.bashrc
+RUN echo "source /opt/ros/humble/setup.bash" >> /home/${USER_NAME}/.bashrc
 
 
 # install dependencies from sphero-sdk
@@ -44,4 +47,6 @@ RUN echo "source /opt/ros/jazzy/setup.bash" >> /home/${USER_NAME}/.bashrc
 USER ${USER_NAME}
 WORKDIR /ros_ws
 
+COPY entrypoint.sh /entrypoint.sh
+# ENTRYPOINT ["/bin/bash","/entrypoint.sh"]
 ENTRYPOINT ["/bin/bash"]

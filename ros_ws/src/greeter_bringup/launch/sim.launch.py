@@ -25,21 +25,4 @@ def generate_launch_description():
             )
         )
     )
-    ld.add_action(
-        Node(
-            package="image_proc",
-            executable="image_proc",
-            name="apriltag_node",
-            output="screen",
-        )
-    )
-    ld.add_action(
-        Node(
-            package="apriltag_ros",
-            executable="apriltag_node",
-            name="apriltag_node",
-            output="screen",
-            parameters=[apriltag_config],
-        )
-    )
     return ld

@@ -8,6 +8,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 from std_srvs.srv import Trigger
 from geometry_msgs.msg import Twist
+from sensor_msgs.msg import Imu
 
 # Sphero SDK
 sys.path.append(
@@ -24,6 +25,7 @@ from sphero_sdk import SerialAsyncDal
 from sphero_sdk import SpheroRvrTargets
 from sphero_sdk import DriveFlagsBitmask
 from sphero_sdk import RawMotorModesEnum
+from sphero_sdk import RvrStreamingServices
 
 # end of imports
 
@@ -33,7 +35,7 @@ rvr = SpheroRvrAsync(dal=SerialAsyncDal(loop))
 
 class SpheroNode(Node):
 
-    def __init__(self):
+    async def __init__(self):
         super().__init__("sphero_rvr_node")
 
         # parameters
@@ -45,6 +47,10 @@ class SpheroNode(Node):
             Twist, "cmd_vel", self.listener_callback, 5
         )
 
+        # publishers
+        self.imu_pub = self.create_publisher(Imu, "imu", 5)
+        self.encoder_pub = self.create_publisher(String, "encoder", 5)
+
         # services
         self.wake_up_srv = self.create_service(
             Trigger, "sphero_wake_up", self.wake_up_service_callback
@@ -55,6 +61,35 @@ class SpheroNode(Node):
         self.get_battery_srv = self.create_service(
             Trigger, "get_battery", self.get_battery_service_callback
         )
+
+        await rvr.sensor_control.add_sensor_data_handler(
+            service=RvrStreamingServices.imu, handler=self.imu_handler
+        )
+
+        await rvr.sensor_control.add_sensor_data_handler(
+            service=RvrStreamingServices.encoders, handler=self.encoder_handler
+        )
+
+    async def imu_handler(self, imu_data):
+        print("IMU data response: ", imu_data)
+        ros_msg = Imu()
+        ros_msg.header.stamp = self.get_clock().now().to_msg()
+        ros_msg.header.frame_id = "imu_link"
+        ros_msg.orientation.x = imu_data["QUATERNION"]["x"]
+        ros_msg.orientation.y = imu_data["QUATERNION"]["y"]
+        ros_msg.orientation.z = imu_data["QUATERNION"]["z"]
+        ros_msg.orientation.w = imu_data["QUATERNION"]["w"]
+        ros_msg.angular_velocity.x = imu_data["GYROSCOPE"]["x"]
+        ros_msg.angular_velocity.y = imu_data["GYROSCOPE"]["y"]
+        ros_msg.angular_velocity.z = imu_data["GYROSCOPE"]["z"]
+        ros_msg.linear_acceleration.x = imu_data["ACCELEROMETER"]["x"]
+        ros_msg.linear_acceleration.y = imu_data["ACCELEROMETER"]["y"]
+        ros_msg.linear_acceleration.z = imu_data["ACCELEROMETER"]["z"]
+
+        self.imu_pub.publish(str(imu_data))
+
+    async def encode_handler(self, encoder_data):
+        pass
 
     async def listener_callback(self, msg):
 

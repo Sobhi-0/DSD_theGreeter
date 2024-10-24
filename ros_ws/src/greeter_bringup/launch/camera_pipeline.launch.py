@@ -36,7 +36,7 @@ def generate_launch_description():
     ld.add_action(
         Node(
             package="image_proc",
-            executable="image_proc",
+            executable="rectify_node",
             output="screen",
         )
     )

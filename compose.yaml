@@ -15,9 +15,11 @@ services:
     volumes:
       - ~/DSD_theGreeter/ros_ws:/ros_ws/:rw
       - /tmp/.X11-unix/:/tmp/.X11-unix/:rw
+      - /dev/video0:/dev/video0:rw
     network_mode: host
     ports:
       - "7400:7400/udp"
       - "7410:7410/udp"
+    privileged: true # required for video
     stdin_open: true
     tty: true

@@ -1,0 +1,23 @@
+services:
+  ros:
+    container_name: thegreeter
+    build:
+      context: .
+      args:
+        - USER_NAME=$USER
+        - USER_ID=$USER_ID
+        - GROUP_ID=$GROUP_ID
+    environment:
+      - DISPLAY=$DISPLAY
+      - ROS_DOMAIN_ID=$ROS_DOMAIN_ID
+    devices:
+      - /dev/video0
+    volumes:
+      - ~/DSD_theGreeter/ros_ws:/ros_ws/:rw
+      - /tmp/.X11-unix/:/tmp/.X11-unix/:rw
+    network_mode: host
+    ports:
+      - "7400:7400/udp"
+      - "7410:7410/udp"
+    stdin_open: true
+    tty: true

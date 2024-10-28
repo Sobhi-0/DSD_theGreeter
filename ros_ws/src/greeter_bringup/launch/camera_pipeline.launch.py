@@ -36,7 +36,15 @@ def generate_launch_description():
     ld.add_action(
         Node(
             package="image_proc",
-            executable="image_proc",
+            executable="rectify_node",
+            output="screen",
+            remappings=[("/image", "/image_raw")]
+        )
+    )
+    ld.add_action(
+        Node(
+            package="image_proc",
+            executable="debayer_node",
             output="screen",
         )
     )
@@ -50,13 +58,13 @@ def generate_launch_description():
             remappings=[("detections", "/apriltag_detections")],
         )
     )
-    ld.add_action(
-        Node(
-            package="apriltag_merge",
-            executable="apriltag_merge_node",
-            name="apriltag_merge_node",
-            output="screen",
-            parameters=[{"allowed_ids": [0]}, {"camera_frame": camera_frame}],
-        )
-    )
+    # ld.add_action(
+    #     Node(
+    #         package="apriltag_merge",
+    #         executable="apriltag_merge_node",
+    #         name="apriltag_merge_node",
+    #         output="screen",
+    #         parameters=[{"allowed_ids": [0]}, {"camera_frame": camera_frame}],
+    #     )
+    # )
     return ld

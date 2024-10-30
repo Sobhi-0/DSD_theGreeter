@@ -140,4 +140,9 @@ async def main(args=None):
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        loop.run_until_complete(main())
+    except Exception as e:
+        print(e)
+        loop.run_until_complete(rvr.close())
+        loop.close()

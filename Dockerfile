@@ -17,6 +17,8 @@ RUN apt-get update && apt-get install -y \
   ros-humble-rqt \
   ros-humble-rqt-common-plugins \
   ros-humble-usb-cam \
+  ros-humble-joy-linux \
+  ros-humble-teleop-twist-joy \
   python3-pip \
   sudo \
   ros-dev-tools
@@ -25,8 +27,8 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir /ros_ws
 
 # RUN python3 -m pip install --upgrade pip
-python3 -m pip install aiohttp requests websocket-client pytest-asyncio pytest twine pyserial pyserial-asyncio
- 
+RUN python3 -m pip install aiohttp requests websocket-client pytest-asyncio pytest twine pyserial pyserial-asyncio
+
 # Add a new user with the same UID and GID as the host user
 ARG USER_ID
 ARG GROUP_ID

@@ -12,6 +12,7 @@ services:
       - ROS_DOMAIN_ID=$ROS_DOMAIN_ID
     devices:
       - /dev/video0
+      - /dev/input/js0
     volumes:
       - ~/DSD_theGreeter/ros_ws:/ros_ws/:rw
       - /tmp/.X11-unix/:/tmp/.X11-unix/:rw

@@ -29,6 +29,35 @@ from sphero_sdk import RvrStreamingServices
 
 # end of imports
 
+vel_lut = {
+      0: 0,
+     31: 0,
+     63: 0,
+     95: 0,
+    127: 0,
+    159: 0,
+    191: 0,
+    223: 0,
+    255: 0
+}
+
+def lut_lookup(vel_m_per_s, intervall=32):
+    lower_bound = (0, 0)    
+    upper_bound = (0, 0)
+
+    for key, value in vel_lut.items():
+        if vel_m_per_s < value:
+            upper_bound = (key, value)
+            break
+        lower_bound = (key, value)
+
+    # interpolate
+    if lower_bound[0] == upper_bound[0]:
+        return lower_bound[0]
+    else:
+        vel_per_pwm = (upper_bound[0] - lower_bound[0]) / (upper_bound[1] - lower_bound[1])
+        return lower_bound[0] + (vel_m_per_s - lower_bound[1]) / vel_per_pwm
+
 loop = asyncio.get_event_loop()
 rvr = SpheroRvrAsync(dal=SerialAsyncDal(loop))
 
@@ -94,8 +123,8 @@ class SpheroNode(Node):
     async def listener_callback(self, msg):
 
         # calculate l and r speed from twist
-        left_speed = msg.linear - (msg.angular * self.wheel_base_in_m / 2)
-        right_speed = msg.linear + (msg.angular * self.wheel_base_in_m / 2)
+        left_speed = lut_lookup(msg.linear - (msg.angular * self.wheel_base_in_m / 2))
+        right_speed = lut_lookup(msg.linear + (msg.angular * self.wheel_base_in_m / 2))
 
         await rvr.raw_motors(
             left_mode=RawMotorModesEnum.reverse.value,

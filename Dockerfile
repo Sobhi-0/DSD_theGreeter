@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
   ros-humble-usb-cam \
   ros-humble-joy-linux \
   ros-humble-teleop-twist-joy \
+  ros-humble-rqt-robot-steering \
   python3-pip \
   sudo \
   ros-dev-tools

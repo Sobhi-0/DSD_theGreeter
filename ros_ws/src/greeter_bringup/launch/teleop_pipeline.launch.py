@@ -22,10 +22,19 @@ def generate_launch_description():
                     {"enable_button": 0},
                     {"axis_linear.x": 1},
                     {"axis_angular.yaw": 0},
-                    {"scale_linear.x": 1},
-                    {"scale_angular.yaw": 1},
+                    {"scale_linear.x": 1.0},
+                    {"scale_angular.yaw": 1.0},
                     {"enable_turbo_button": 1}
                 ],
             ),
+            Node(
+                package="sphero_rvr",
+                executable="sphero_rvr_node",
+                name="sphero_rvr_node",
+                output="screen",
+                parameters=[
+                    {"wheel_base_in_m": 0.2}
+                ]
+            )
         ]
     )

@@ -1,6 +1,6 @@
 import os
 import sys
-import asyncio
+import time
 
 # ROS
 import rclpy
@@ -20,25 +20,26 @@ sys.path.append(
     )
 )
 
-from sphero_sdk import SpheroRvrAsync
-from sphero_sdk import SerialAsyncDal
 from sphero_sdk import SpheroRvrTargets
 from sphero_sdk import DriveFlagsBitmask
 from sphero_sdk import RawMotorModesEnum
 from sphero_sdk import RvrStreamingServices
 
+from sphero_sdk import SpheroRvrObserver
+from sphero_sdk import RawMotorModesEnum
+
 # end of imports
 
 vel_lut = {
       0: 0,
-     31: 0,
-     63: 0,
-     95: 0,
-    127: 0,
-    159: 0,
-    191: 0,
-    223: 0,
-    255: 0
+     31: 0.2,
+     63: 0.2,
+     95: 0.2,
+    127: 0.2,
+    159: 0.2,
+    191: 0.2,
+    223: 0.2,
+    255: 0.2
 }
 
 def lut_lookup(vel_m_per_s, intervall=32):
@@ -58,18 +59,17 @@ def lut_lookup(vel_m_per_s, intervall=32):
         vel_per_pwm = (upper_bound[0] - lower_bound[0]) / (upper_bound[1] - lower_bound[1])
         return lower_bound[0] + (vel_m_per_s - lower_bound[1]) / vel_per_pwm
 
-loop = asyncio.get_event_loop()
-rvr = SpheroRvrAsync(dal=SerialAsyncDal(loop))
+rvr = SpheroRvrObserver()
 
 
 class SpheroNode(Node):
 
-    async def __init__(self):
+    def __init__(self):
         super().__init__("sphero_rvr_node")
 
         # parameters
         self.declare_parameter("wheel_base_in_m", rclpy.Parameter.Type.DOUBLE)
-        self.wheel_base_in_m = self.get_parameter("wheel_base_in_m")
+        self.wheel_base_in_m = self.get_parameter("wheel_base_in_m").value
 
         # subscriptions
         self.subscription = self.create_subscription(
@@ -91,58 +91,80 @@ class SpheroNode(Node):
             Trigger, "get_battery", self.get_battery_service_callback
         )
 
-        await rvr.sensor_control.add_sensor_data_handler(
-            service=RvrStreamingServices.imu, handler=self.imu_handler
+        rvr.wake()
+
+        time.sleep(2)
+        
+        rvr.sensor_control.add_sensor_data_handler(
+            service=RvrStreamingServices.imu,
+            handler=self.imu_handler
         )
 
-        await rvr.sensor_control.add_sensor_data_handler(
-            service=RvrStreamingServices.encoders, handler=self.encoder_handler
-        )
+        for k in rvr.sensor_control.supported_sensors:
+            self.get_logger().info(k)
 
-    async def imu_handler(self, imu_data):
-        print("IMU data response: ", imu_data)
+        rvr.sensor_control.start(interval=250)
+
+        # await rvr.sensor_control.add_sensor_data_handler(
+        #     service=RvrStreamingServices.imu, handler=self.imu_handler
+        # )
+
+        # await rvr.sensor_control.add_sensor_data_handler(
+        #     service=RvrStreamingServices.encoders, handler=self.encoder_handler
+        # )
+
+    def imu_handler(self, imu_data):
+
+        for key in imu_data.keys():
+            self.get_logger().info(key)
+
         ros_msg = Imu()
         ros_msg.header.stamp = self.get_clock().now().to_msg()
         ros_msg.header.frame_id = "imu_link"
-        ros_msg.orientation.x = imu_data["QUATERNION"]["x"]
-        ros_msg.orientation.y = imu_data["QUATERNION"]["y"]
-        ros_msg.orientation.z = imu_data["QUATERNION"]["z"]
-        ros_msg.orientation.w = imu_data["QUATERNION"]["w"]
-        ros_msg.angular_velocity.x = imu_data["GYROSCOPE"]["x"]
-        ros_msg.angular_velocity.y = imu_data["GYROSCOPE"]["y"]
-        ros_msg.angular_velocity.z = imu_data["GYROSCOPE"]["z"]
-        ros_msg.linear_acceleration.x = imu_data["ACCELEROMETER"]["x"]
-        ros_msg.linear_acceleration.y = imu_data["ACCELEROMETER"]["y"]
-        ros_msg.linear_acceleration.z = imu_data["ACCELEROMETER"]["z"]
+        # ros_msg.orientation.x = imu_data["QUATERNION"]["x"]
+        # ros_msg.orientation.y = imu_data["QUATERNION"]["y"]
+        # ros_msg.orientation.z = imu_data["QUATERNION"]["z"]
+        # ros_msg.orientation.w = imu_data["QUATERNION"]["w"]
+        # ros_msg.angular_velocity.x = imu_data["GYROSCOPE"]["x"]
+        # ros_msg.angular_velocity.y = imu_data["GYROSCOPE"]["y"]
+        # ros_msg.angular_velocity.z = imu_data["GYROSCOPE"]["z"]
+        ros_msg.linear_acceleration.x = imu_data["ACCELEROMETER"]["X"] # NOTE: doesn't work
 
-        self.imu_pub.publish(str(imu_data))
+        # TODO: convert rpy to quaternion
+        # NOTE: The following code is rubbish as the angle needs to be transformed first        # NOTE: The following code is rubbish as the angle needs to be transformed first
+        ros_msg.orientation.x = imu_data["IMU"]["Roll"]
+        ros_msg.orientation.y = imu_data["IMU"]["Pitch"]
+        ros_msg.orientation.z = imu_data["IMU"]["Yaw"]
 
-    async def encode_handler(self, encoder_data):
+        self.imu_pub.publish(ros_msg)
+
+    def encode_handler(self, encoder_data):
         pass
 
-    async def listener_callback(self, msg):
+    def listener_callback(self, msg):
 
         # calculate l and r speed from twist
-        left_speed = lut_lookup(msg.linear - (msg.angular * self.wheel_base_in_m / 2))
-        right_speed = lut_lookup(msg.linear + (msg.angular * self.wheel_base_in_m / 2))
+        left_speed = lut_lookup(msg.linear.x - (msg.angular.z * self.wheel_base_in_m / 2))
+        right_speed = lut_lookup(msg.linear.x + (msg.angular.z * self.wheel_base_in_m / 2))
 
-        await rvr.raw_motors(
-            left_mode=RawMotorModesEnum.reverse.value,
-            left_speed=left_speed,  # Valid speed values are 0-255
+        rvr.raw_motors(
+            left_mode=RawMotorModesEnum.forward.value,
+            left_duty_cycle=left_speed,  # Valid duty cycle range is 0-255
             right_mode=RawMotorModesEnum.forward.value,
-            right_speed=right_speed,  # Valid speed values are 0-255
+            right_duty_cycle=right_speed  # Valid duty cycle range is 0-255
         )
 
-    async def wake_up_service_callback(self, _, response):
+    def wake_up_service_callback(self, _, response):
         # TODO: implement wake up service
-        await rvr.wake()
-        await asyncio.sleep(2)
+        rvr.wake()
+        time.sleep(2)
         self.get_logger().info("woke up")
         response.success = True
         return response
 
     def sleep_service_callback(self, _, response):
         # TODO: implement sleep service
+        rvr.sleep()
         self.get_logger().info("sleeping")
         response.success = True
         return response
@@ -154,7 +176,7 @@ class SpheroNode(Node):
         return response
 
 
-async def main(args=None):
+def main(args=None):
     rclpy.init(args=args)
 
     # sphero control
@@ -170,8 +192,8 @@ async def main(args=None):
 
 if __name__ == "__main__":
     try:
-        loop.run_until_complete(main())
-    except Exception as e:
-        print(e)
-        loop.run_until_complete(rvr.close())
-        loop.close()
+        main()
+    finally:
+        rvr.sensor_control.clear()
+        time.sleep(0.5)
+        rvr.close()

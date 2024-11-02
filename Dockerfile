@@ -37,6 +37,10 @@ RUN groupadd -g ${GROUP_ID} ${USER_NAME} && \
   useradd -m -u ${USER_ID} -g ${USER_NAME} ${USER_NAME}
 RUN usermod -aG sudo ${USER_NAME}
 
+RUN usermod -aG dialout ${USER_NAME}
+
+RUN apt-get install -y screen
+
 # Change ownership of the workspace to the new user
 RUN chown -R ${USER_NAME}:${USER_NAME} /ros_ws
 RUN echo "source /opt/ros/humble/setup.bash" >> /home/${USER_NAME}/.bashrc

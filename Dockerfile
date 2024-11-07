@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
   ros-humble-rviz2 \
   ros-humble-rqt \
   ros-humble-rqt-common-plugins \
+ros-humble-camera-calibration \
   ros-humble-usb-cam \
   python3-pip \
   sudo \

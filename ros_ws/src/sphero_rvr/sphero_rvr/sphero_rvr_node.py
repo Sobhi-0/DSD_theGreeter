@@ -5,7 +5,7 @@ import time
 # ROS
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import String, Int32
 from std_srvs.srv import Trigger
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
@@ -78,7 +78,8 @@ class SpheroNode(Node):
 
         # publishers
         self.imu_pub = self.create_publisher(Imu, "imu", 5)
-        self.encoder_pub = self.create_publisher(String, "encoder", 5)
+        self.lwheel_pub = self.create_publisher(Int32, "lwheel", 5)
+        self.rwheel_pub = self.create_publisher(Int32, "rwheel", 5)
 
         # services
         self.wake_up_srv = self.create_service(
@@ -99,6 +100,11 @@ class SpheroNode(Node):
             service=RvrStreamingServices.imu,
             handler=self.imu_handler
         )
+        rvr.sensor_control.add_sensor_data_handler(
+            service=RvrStreamingServices.encoders,
+            handler=self.encoder_handler
+        )
+
 
         for k in rvr.sensor_control.supported_sensors:
             self.get_logger().info(k)
@@ -138,7 +144,9 @@ class SpheroNode(Node):
 
         self.imu_pub.publish(ros_msg)
 
-    def encode_handler(self, encoder_data):
+    def encoder_handler(self, encoder_data):
+        # self.lwheel_pub.publish(Int32(data=encoder_data["leftMotor"]["step_count"]))
+        # self.lwheel_pub.publish(Int32(data=encoder_data["leftMotor"]["step_count"]))
         pass
 
     def listener_callback(self, msg):

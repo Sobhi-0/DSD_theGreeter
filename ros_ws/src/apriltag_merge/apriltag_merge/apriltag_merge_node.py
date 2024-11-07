@@ -23,7 +23,6 @@ class ApriltagMergeNode(Node):
         self.detection_sub = self.create_subscription(
             AprilTagDetection, "/apriltag_detections", self.listener_callback, 5
         )
-        self.marker_detections = []  # Poses
 
         # tf listener
         # TODO: create tf listener
@@ -34,7 +33,6 @@ class ApriltagMergeNode(Node):
         )
 
         timer_period = 0.1  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
 
     def listener_callback(self, msg):
         if msg.id in self.allowed_ids:
@@ -50,19 +48,8 @@ class ApriltagMergeNode(Node):
             # TODO: calculate the covariance from the "goodness"
             # pose_with_covariance_stamped.pose.covariance = # list of 36 float values
 
-            self.marker_detections.append(pose_with_covariance_stamped)
+            self.position.publish(pose_with_covariance_stamped)
 
-    def timer_callback(self):
-        try:
-            current_position = self.marker_detections.pop()
-        except IndexError:
-            current_position = PoseWithCovarianceStamped()
-            current_position.header.frame_id = self.camera_frame
-            current_position.header.stamp = self.get_clock().now().to_msg()
-            # current_position.pose.covariance = [0.0 for _ in range(0, 36)]
-
-        self.marker_detections.clear()
-        self.position.publish(current_position)
 
 
 def main(args=None):

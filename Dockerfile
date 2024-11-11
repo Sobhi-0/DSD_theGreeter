@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -y \
   ros-humble-rqt-common-plugins \
 ros-humble-camera-calibration \
   ros-humble-usb-cam \
+  ros-humble-joy-linux \
+  ros-humble-teleop-twist-joy \
+  ros-humble-rqt-robot-steering \
   python3-pip \
   sudo \
   ros-dev-tools
@@ -26,6 +29,7 @@ ros-humble-camera-calibration \
 RUN mkdir /ros_ws
 
 # RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install aiohttp requests websocket-client pytest-asyncio pytest twine pyserial pyserial-asyncio
 
 # Add a new user with the same UID and GID as the host user
 ARG USER_ID
@@ -34,6 +38,10 @@ ARG USER_NAME
 RUN groupadd -g ${GROUP_ID} ${USER_NAME} && \
   useradd -m -u ${USER_ID} -g ${USER_NAME} ${USER_NAME}
 RUN usermod -aG sudo ${USER_NAME}
+
+RUN usermod -aG dialout ${USER_NAME}
+
+RUN apt-get install -y screen
 
 # Change ownership of the workspace to the new user
 RUN chown -R ${USER_NAME}:${USER_NAME} /ros_ws

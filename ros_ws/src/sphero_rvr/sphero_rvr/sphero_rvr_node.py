@@ -7,8 +7,9 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from std_srvs.srv import Trigger
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Quaternion, Vector3
 from sensor_msgs.msg import Imu
+import tf2_ros
 
 # Sphero SDK
 sys.path.append(
@@ -30,34 +31,39 @@ from sphero_sdk import RawMotorModesEnum
 
 # end of imports
 
-vel_lut = {
-      0: 0,
-     31: 0.2,
-     63: 0.2,
-     95: 0.2,
-    127: 0.2,
-    159: 0.2,
-    191: 0.2,
-    223: 0.2,
-    255: 0.2
-}
+fixed_vel = 0.2
 
-def lut_lookup(vel_m_per_s, intervall=32):
-    lower_bound = (0, 0)    
-    upper_bound = (0, 0)
+# vel_lut = {
+#       0: 0,
+#      31: 0,
+#      50: 0,
+#      75: 0.05,
+#      95: fixed_vel,
+#     127: fixed_vel,
+#     159: fixed_vel,
+#     191: fixed_vel,
+#     223: fixed_vel,
+#     255: fixed_vel
+# }
 
-    for key, value in vel_lut.items():
-        if vel_m_per_s < value:
-            upper_bound = (key, value)
-            break
-        lower_bound = (key, value)
+# def lut_lookup(vel_m_per_s, intervall=32):
+#     if vel_m_per_s == 0:
+#         return 0
+#     lower_bound = (0, 0)    
+#     upper_bound = (0, 0)
 
-    # interpolate
-    if lower_bound[0] == upper_bound[0]:
-        return lower_bound[0]
-    else:
-        vel_per_pwm = (upper_bound[0] - lower_bound[0]) / (upper_bound[1] - lower_bound[1])
-        return lower_bound[0] + (vel_m_per_s - lower_bound[1]) / vel_per_pwm
+#     for key, value in vel_lut.items():
+#         if vel_m_per_s < value:
+#             upper_bound = (key, value)
+#             break
+#         lower_bound = (key, value)
+
+#     # interpolate
+#     if lower_bound[0] == upper_bound[0]:
+#         return lower_bound[0]
+#     else:
+#         vel_per_pwm = (upper_bound[0] - lower_bound[0]) / (upper_bound[1] - lower_bound[1])
+#         return lower_bound[0] + (vel_m_per_s - lower_bound[1]) / vel_per_pwm
 
 rvr = SpheroRvrObserver()
 
@@ -99,63 +105,96 @@ class SpheroNode(Node):
             service=RvrStreamingServices.imu,
             handler=self.imu_handler
         )
+        rvr.sensor_control.add_sensor_data_handler(
+            service=RvrStreamingServices.accelerometer,
+            handler=self.acc_handler
+        )
 
         for k in rvr.sensor_control.supported_sensors:
             self.get_logger().info(k)
 
         rvr.sensor_control.start(interval=250)
 
-        # await rvr.sensor_control.add_sensor_data_handler(
-        #     service=RvrStreamingServices.imu, handler=self.imu_handler
-        # )
+        self.orientation = Quaternion()
+        self.acc_lin = Vector3()
+        self.imu_pub_timer = self.create_timer(1.0, self.publish_imu)
 
-        # await rvr.sensor_control.add_sensor_data_handler(
-        #     service=RvrStreamingServices.encoders, handler=self.encoder_handler
-        # )
+
+    def publish_imu(self):
+        
+        ros_msg = Imu()
+        ros_msg.header.stamp = self.get_clock().now().to_msg()
+        ros_msg.header.frame_id = "imu_link"
+
+        ros_msg.orientation = self.orientation
+
+        self.imu_pub.publish(ros_msg)
+        
+    def acc_handler(self, acc_data):
+        with open("/home/dev/acc_log.txt", "w") as fobj:
+            fobj.write(str(acc_data))
+
+        # self.acc_lin = 
 
     def imu_handler(self, imu_data):
+
+        with open("/home/dev/imu_log.txt", "w") as fobj:
+            fobj.write(str(imu_data))
 
         for key in imu_data.keys():
             self.get_logger().info(key)
 
-        ros_msg = Imu()
-        ros_msg.header.stamp = self.get_clock().now().to_msg()
-        ros_msg.header.frame_id = "imu_link"
-        # ros_msg.orientation.x = imu_data["QUATERNION"]["x"]
-        # ros_msg.orientation.y = imu_data["QUATERNION"]["y"]
-        # ros_msg.orientation.z = imu_data["QUATERNION"]["z"]
-        # ros_msg.orientation.w = imu_data["QUATERNION"]["w"]
-        # ros_msg.angular_velocity.x = imu_data["GYROSCOPE"]["x"]
-        # ros_msg.angular_velocity.y = imu_data["GYROSCOPE"]["y"]
-        # ros_msg.angular_velocity.z = imu_data["GYROSCOPE"]["z"]
-        ros_msg.linear_acceleration.x = imu_data["ACCELEROMETER"]["X"] # NOTE: doesn't work
-
         # TODO: convert rpy to quaternion
         # NOTE: The following code is rubbish as the angle needs to be transformed first        # NOTE: The following code is rubbish as the angle needs to be transformed first
-        ros_msg.orientation.x = imu_data["IMU"]["Roll"]
-        ros_msg.orientation.y = imu_data["IMU"]["Pitch"]
-        ros_msg.orientation.z = imu_data["IMU"]["Yaw"]
+        # q = tf2_ros.quaternion()
+        # q.setRPY(imu_data["IMU"]["Roll"],imu_data["IMU"]["Pitch"],imu_data["IMU"]["Yaw"])
 
-        self.imu_pub.publish(ros_msg)
+        self.orientation.x = imu_data["IMU"]["Roll"]
+        self.orientation.y = imu_data["IMU"]["Pitch"]
+        self.orientation.z = imu_data["IMU"]["Yaw"]
+
+        
 
     def encode_handler(self, encoder_data):
         pass
 
+    def calc_pwm(self,vel_m_per_s):
+        # 50->255
+        # 0 ->  2
+        d=(255-50) / 2
+        if vel_m_per_s<0.01:
+            return 0
+        else:
+            return min(50+d*vel_m_per_s, 255)
+        
+        
     def listener_callback(self, msg):
-
         # calculate l and r speed from twist
-        left_speed = lut_lookup(msg.linear.x - (msg.angular.z * self.wheel_base_in_m / 2))
-        right_speed = lut_lookup(msg.linear.x + (msg.angular.z * self.wheel_base_in_m / 2))
+        left_speed = msg.linear.x - (msg.angular.z * self.wheel_base_in_m / 2)
+        right_speed = msg.linear.x + (msg.angular.z * self.wheel_base_in_m / 2)
+
+        if left_speed<0:
+            left_mode=RawMotorModesEnum.reverse.value
+        else:
+            left_mode=RawMotorModesEnum.forward.value
+
+        if right_speed<0:
+            right_mode=RawMotorModesEnum.reverse.value
+        else:
+            right_mode=RawMotorModesEnum.forward.value
+
+        left_duty_cycle=int(self.calc_pwm(abs(left_speed)))
+        right_duty_cycle=int(self.calc_pwm(abs(right_speed)))
+        self.get_logger().info(f"l: {left_duty_cycle:3}, r: {right_duty_cycle:3}")
 
         rvr.raw_motors(
-            left_mode=RawMotorModesEnum.forward.value,
-            left_duty_cycle=left_speed,  # Valid duty cycle range is 0-255
-            right_mode=RawMotorModesEnum.forward.value,
-            right_duty_cycle=right_speed  # Valid duty cycle range is 0-255
+            left_mode=left_mode,
+            left_duty_cycle=left_duty_cycle,  # Valid duty cycle range is 0-255
+            right_mode=right_mode,
+            right_duty_cycle=right_duty_cycle # Valid duty cycle range is 0-255
         )
 
     def wake_up_service_callback(self, _, response):
-        # TODO: implement wake up service
         rvr.wake()
         time.sleep(2)
         self.get_logger().info("woke up")
@@ -163,7 +202,6 @@ class SpheroNode(Node):
         return response
 
     def sleep_service_callback(self, _, response):
-        # TODO: implement sleep service
         rvr.sleep()
         self.get_logger().info("sleeping")
         response.success = True

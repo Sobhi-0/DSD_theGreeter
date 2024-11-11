@@ -33,7 +33,7 @@ def generate_launch_description():
                 name="sphero_rvr_node",
                 output="screen",
                 parameters=[
-                    {"wheel_base_in_m": 0.2}
+                    {"wheel_base_in_m": 0.18}
                 ]
             )
         ]

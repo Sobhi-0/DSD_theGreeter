@@ -132,14 +132,15 @@ class SpheroNode(Node):
         ros_msg.header.frame_id = "imu_link"
 
         ros_msg.orientation = self.orientation
+        ros_msg.linear_acceleration = self.acc_lin
 
         self.imu_pub.publish(ros_msg)
         
     def acc_handler(self, acc_data):
-        with open("/home/dev/acc_log.txt", "w") as fobj:
-            fobj.write(str(acc_data))
 
-        # self.acc_lin = 
+        self.acc_lin.x = acc_data["Accelerometer"]["X"]
+        self.acc_lin.y = acc_data["Accelerometer"]["Y"]
+        self.acc_lin.z = acc_data["Accelerometer"]["Z"]
 
     def imu_handler(self, imu_data):
 

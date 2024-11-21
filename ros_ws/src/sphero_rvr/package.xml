@@ -7,6 +7,12 @@
   <maintainer email="jst24008@student.mdu.se">Jonas Schmidt</maintainer>
   <license>TODO: License declaration</license>
 
+  <depend>greeter_msgs</depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>odom_publisher</exec_depend>
+
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>

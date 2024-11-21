@@ -9,6 +9,7 @@ from std_msgs.msg import String, Int32
 from std_srvs.srv import Trigger
 from geometry_msgs.msg import Twist, Quaternion, Vector3
 from sensor_msgs.msg import Imu
+from greeter_msgs.msg import EncoderTicks
 import tf2_ros
 
 # Sphero SDK
@@ -84,8 +85,7 @@ class SpheroNode(Node):
 
         # publishers
         self.imu_pub = self.create_publisher(Imu, "imu", 5)
-        self.lwheel_pub = self.create_publisher(Int32, "lwheel", 5)
-        self.rwheel_pub = self.create_publisher(Int32, "rwheel", 5)
+        self.encoder_ticks = self.create_publisher(EncoderTicks, "encoder_ticks", 5)
 
         # services
         self.wake_up_srv = self.create_service(
@@ -110,6 +110,7 @@ class SpheroNode(Node):
             service=RvrStreamingServices.accelerometer,
             handler=self.acc_handler
         )
+        rvr.sensor_control.add_sensor_data_handler(
             service=RvrStreamingServices.encoders,
             handler=self.encoder_handler
         )
@@ -160,10 +161,9 @@ class SpheroNode(Node):
         
 
     def encoder_handler(self, encoder_data):
-        # self.lwheel_pub.publish(Int32(data=encoder_data["leftMotor"]["step_count"]))
-        # self.lwheel_pub.publish(Int32(data=encoder_data["leftMotor"]["step_count"]))
-        pass
-
+        encoder_msg = EncoderTicks()
+        self.encoder_ticks.publish(encoder_msg)
+        
     def calc_pwm(self,vel_m_per_s):
         # 50->255
         # 0 ->  2

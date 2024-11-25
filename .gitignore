@@ -1,3 +1,6 @@
+.cache/
+
 ros_ws/install
 ros_ws/log
 ros_ws/build
+ros_ws/compile_commands.json

@@ -158,11 +158,23 @@ class SpheroNode(Node):
         self.orientation.y = imu_data["IMU"]["Pitch"]
         self.orientation.z = imu_data["IMU"]["Yaw"]
 
-        
+    def map_value(self, ticks):
+        if ticks >= 2**31:
+            ticks = ticks - 2**32
+            return ticks
+        return ticks
 
     def encoder_handler(self, encoder_data):
         encoder_msg = EncoderTicks()
+
+        encoders = encoder_data.get('Encoders')
+
+        encoder_msg.left =  self.map_value(encoders.get('LeftTicks'))
+        encoder_msg.right = self.map_value(encoders.get('RightTicks'))
+        encoder_msg.header.stamp = self.get_clock().now().to_msg()
+        
         self.encoder_ticks.publish(encoder_msg)
+
         
     def calc_pwm(self,vel_m_per_s):
         # 50->255

@@ -48,8 +48,12 @@ public:
         this->create_publisher<nav_msgs::msg::Odometry>(odom_topic, 10);
 
     // initialize covariance of pose
-    std::fill(pose.covariance.begin(), pose.covariance.end(),
-              0); // TODO: initialize with correct values
+    {
+      int filler_value = 1;
+      for (int i = 0; i < 36; i += 6) {
+        pose.covariance.at(i) = filler_value;
+      }
+    }
   }
 
 private:

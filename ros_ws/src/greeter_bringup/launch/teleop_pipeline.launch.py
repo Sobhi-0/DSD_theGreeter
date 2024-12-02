@@ -35,6 +35,19 @@ def generate_launch_description():
                 parameters=[
                     {"wheel_base_in_m": 0.18}
                 ]
-            )
+            ),
+            Node(
+                package="odom_publisher",
+                executable="odom_publisher_node",
+                name="odom_publisher_node",
+                output="screen",
+                parameters=[
+                    {"encoder_topic": "/encoder_ticks"},
+                    {"odom_topic": "/odom"},
+                    {"wheel_base": 0.18},
+                    {"wheel_radius": 0.065},
+                    {"ticks_per_rev": 890},
+                ]
+            ),
         ]
     )

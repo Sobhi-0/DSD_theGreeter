@@ -16,9 +16,11 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(greeter_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 add_executable(odom_publisher_node src/odom_publisher_node.cpp)
-ament_target_dependencies(odom_publisher_node PUBLIC rclcpp std_msgs geometry_msgs nav_msgs greeter_msgs)
+ament_target_dependencies(odom_publisher_node PUBLIC rclcpp std_msgs geometry_msgs nav_msgs greeter_msgs tf2 tf2_geometry_msgs)
 target_include_directories(odom_publisher_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)

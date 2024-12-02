@@ -13,7 +13,7 @@ services:
     devices:
       - /dev/video0
       # - /dev/input/js0
-      - /dev/ttyS0
+      - /dev/ttyAMA0
     volumes:
       - ~/DSD_theGreeter/ros_ws:/ros_ws/:rw
       - /tmp/.X11-unix/:/tmp/.X11-unix/:rw

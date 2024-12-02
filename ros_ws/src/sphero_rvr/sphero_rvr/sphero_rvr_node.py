@@ -7,10 +7,10 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String, Int32
 from std_srvs.srv import Trigger
-from geometry_msgs.msg import Twist, Quaternion, Vector3
+from geometry_msgs.msg import Twist, Quaternion, Vector3, PoseStamped
 from sensor_msgs.msg import Imu
 from greeter_msgs.msg import EncoderTicks
-import tf2_ros
+from math import cos, sin, pi
 
 # Sphero SDK
 sys.path.append(
@@ -86,6 +86,7 @@ class SpheroNode(Node):
         # publishers
         self.imu_pub = self.create_publisher(Imu, "imu", 5)
         self.encoder_ticks = self.create_publisher(EncoderTicks, "encoder_ticks", 5)
+        self.debug_pub = self.create_publisher(PoseStamped, "orientation_imu", 5)
 
         # services
         self.wake_up_srv = self.create_service(
@@ -152,12 +153,27 @@ class SpheroNode(Node):
 
         # TODO: convert rpy to quaternion
         # NOTE: The following code is rubbish as the angle needs to be transformed first        # NOTE: The following code is rubbish as the angle needs to be transformed first
-        # q = tf2_ros.quaternion()
-        # q.setRPY(imu_data["IMU"]["Roll"],imu_data["IMU"]["Pitch"],imu_data["IMU"]["Yaw"])
+        
+        roll = imu_data["IMU"]["Roll"] * 2 * pi / 360
+        pitch = imu_data["IMU"]["Pitch"] * 2 * pi / 360
+        yaw = imu_data["IMU"]["Yaw"] * 2 * pi / 360
+        cr = cos(roll * 0.5)
+        sr = sin(roll * 0.5)
+        cp = cos(pitch * 0.5)
+        sp = sin(pitch * 0.5)
+        cy = cos(yaw * 0.5)
+        sy = sin(yaw * 0.5)
 
-        self.orientation.x = imu_data["IMU"]["Roll"]
-        self.orientation.y = imu_data["IMU"]["Pitch"]
-        self.orientation.z = imu_data["IMU"]["Yaw"]
+        q = Quaternion()
+        q.w = cr * cp * cy + sr * sp * sy
+        q.x = sr * cp * cy - cr * sp * sy
+        q.y = cr * sp * cy + sr * cp * sy
+        q.z = cr * cp * sy - sr * sp * cy
+        self.orientation = q
+        pose = PoseStamped()
+        pose.header.frame_id = "/base_link"
+        pose.pose.orientation = q
+        self.debug_pub.publish(pose)
 
     def map_value(self, ticks):
         if ticks >= 2**31:

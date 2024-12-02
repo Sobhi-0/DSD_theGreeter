@@ -55,7 +55,7 @@ def generate_launch_description():
             name="apriltag_node",
             output="screen",
             parameters=[apriltag_config],
-            remappings=[("detections", "/apriltag_detections")],
+            remappings=[("detections", "/apriltag_detections"),("image_rect", "/image_raw")],
         )
     )
     # ld.add_action(

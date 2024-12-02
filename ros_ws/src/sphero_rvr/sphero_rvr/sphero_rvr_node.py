@@ -7,9 +7,10 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String, Int32
 from std_srvs.srv import Trigger
-from geometry_msgs.msg import Twist, Quaternion, Vector3
+from geometry_msgs.msg import Twist, Quaternion, Vector3, PoseStamped
 from sensor_msgs.msg import Imu
-import tf2_ros
+from greeter_msgs.msg import EncoderTicks
+from math import cos, sin, pi
 
 # Sphero SDK
 sys.path.append(
@@ -84,8 +85,8 @@ class SpheroNode(Node):
 
         # publishers
         self.imu_pub = self.create_publisher(Imu, "imu", 5)
-        self.lwheel_pub = self.create_publisher(Int32, "lwheel", 5)
-        self.rwheel_pub = self.create_publisher(Int32, "rwheel", 5)
+        self.encoder_ticks = self.create_publisher(EncoderTicks, "encoder_ticks", 5)
+        self.debug_pub = self.create_publisher(PoseStamped, "orientation_imu", 5)
 
         # services
         self.wake_up_srv = self.create_service(
@@ -110,6 +111,7 @@ class SpheroNode(Node):
             service=RvrStreamingServices.accelerometer,
             handler=self.acc_handler
         )
+        rvr.sensor_control.add_sensor_data_handler(
             service=RvrStreamingServices.encoders,
             handler=self.encoder_handler
         )
@@ -131,14 +133,15 @@ class SpheroNode(Node):
         ros_msg.header.frame_id = "imu_link"
 
         ros_msg.orientation = self.orientation
+        ros_msg.linear_acceleration = self.acc_lin
 
         self.imu_pub.publish(ros_msg)
         
     def acc_handler(self, acc_data):
-        with open("/home/dev/acc_log.txt", "w") as fobj:
-            fobj.write(str(acc_data))
 
-        # self.acc_lin = 
+        self.acc_lin.x = acc_data["Accelerometer"]["X"]
+        self.acc_lin.y = acc_data["Accelerometer"]["Y"]
+        self.acc_lin.z = acc_data["Accelerometer"]["Z"]
 
     def imu_handler(self, imu_data):
 
@@ -150,20 +153,46 @@ class SpheroNode(Node):
 
         # TODO: convert rpy to quaternion
         # NOTE: The following code is rubbish as the angle needs to be transformed first        # NOTE: The following code is rubbish as the angle needs to be transformed first
-        # q = tf2_ros.quaternion()
-        # q.setRPY(imu_data["IMU"]["Roll"],imu_data["IMU"]["Pitch"],imu_data["IMU"]["Yaw"])
-
-        self.orientation.x = imu_data["IMU"]["Roll"]
-        self.orientation.y = imu_data["IMU"]["Pitch"]
-        self.orientation.z = imu_data["IMU"]["Yaw"]
-
         
+        roll = imu_data["IMU"]["Roll"] * 2 * pi / 360
+        pitch = imu_data["IMU"]["Pitch"] * 2 * pi / 360
+        yaw = imu_data["IMU"]["Yaw"] * 2 * pi / 360
+        cr = cos(roll * 0.5)
+        sr = sin(roll * 0.5)
+        cp = cos(pitch * 0.5)
+        sp = sin(pitch * 0.5)
+        cy = cos(yaw * 0.5)
+        sy = sin(yaw * 0.5)
+
+        q = Quaternion()
+        q.w = cr * cp * cy + sr * sp * sy
+        q.x = sr * cp * cy - cr * sp * sy
+        q.y = cr * sp * cy + sr * cp * sy
+        q.z = cr * cp * sy - sr * sp * cy
+        self.orientation = q
+        pose = PoseStamped()
+        pose.header.frame_id = "/base_link"
+        pose.pose.orientation = q
+        self.debug_pub.publish(pose)
+
+    def map_value(self, ticks):
+        if ticks >= 2**31:
+            ticks = ticks - 2**32
+            return ticks
+        return ticks
 
     def encoder_handler(self, encoder_data):
-        # self.lwheel_pub.publish(Int32(data=encoder_data["leftMotor"]["step_count"]))
-        # self.lwheel_pub.publish(Int32(data=encoder_data["leftMotor"]["step_count"]))
-        pass
+        encoder_msg = EncoderTicks()
 
+        encoders = encoder_data.get('Encoders')
+
+        encoder_msg.left =  self.map_value(encoders.get('LeftTicks'))
+        encoder_msg.right = self.map_value(encoders.get('RightTicks'))
+        encoder_msg.header.stamp = self.get_clock().now().to_msg()
+        
+        self.encoder_ticks.publish(encoder_msg)
+  
+   
     def calc_pwm(self,vel_m_per_s):
         # 50->255
         # 0 ->  2

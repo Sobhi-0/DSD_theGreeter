@@ -27,14 +27,5 @@ def generate_launch_description():
                     {"enable_turbo_button": 1}
                 ],
             ),
-            Node(
-                package="sphero_rvr",
-                executable="sphero_rvr_node",
-                name="sphero_rvr_node",
-                output="screen",
-                parameters=[
-                    {"wheel_base_in_m": 0.18}
-                ]
-            )
         ]
     )

@@ -24,6 +24,16 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource(
                     [
                         os.path.join(
+                            get_package_share_directory("greeter_bringup"), "launch"
+                        ),
+                        "/robot_localization.launch.py",
+                    ]
+                )
+            ),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    [
+                        os.path.join(
                             get_package_share_directory("greeter_description"), 
                             "launch",
                         ),

@@ -10,7 +10,7 @@ def generate_launch_description():
         [
             Node(
                 package="robot_localization",
-                executable="ekf_localization_node",
+                executable="ekf_node",
                 name="ekf_localization_node",
                 output="screen",
                 parameters=[robot_localization_config_path],

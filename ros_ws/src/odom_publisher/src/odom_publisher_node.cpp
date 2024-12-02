@@ -3,6 +3,8 @@
 #include "greeter_msgs/msg/encoder_ticks.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include "rclcpp/rclcpp.hpp"
+#include "tf2/LinearMath/Quaternion.h"
+#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 #include <algorithm>
 #include <array>
 #include <chrono>
@@ -13,8 +15,6 @@
 #include <rclcpp/duration.hpp>
 #include <string>
 #include <utility>
-#include "tf2/LinearMath/Quaternion.h"
-#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 
 using namespace std::chrono_literals;
 using std::placeholders::_1;
@@ -46,11 +46,15 @@ public:
             std::bind(&OdomPublisher::encoder_callback, this, _1));
 
     // publisher
-    // odom_publisher_ =
-    //     this->create_publisher<nav_msgs::msg::Odometry>(odom_topic, 10);
+    odom_publisher_ =
+        this->create_publisher<nav_msgs::msg::Odometry>(odom_topic, 10);
 
-    pose_publisher = this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("encoder_pose", 10);
-    twist_publisher = this->create_publisher<geometry_msgs::msg::TwistWithCovarianceStamped>("encoder_twist", 10);
+    pose_publisher =
+        this->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>(
+            "encoder_pose", 10);
+    twist_publisher =
+        this->create_publisher<geometry_msgs::msg::TwistWithCovarianceStamped>(
+            "encoder_twist", 10);
 
     // initialize covariance of pose
     {
@@ -80,7 +84,7 @@ private:
     {
       double ticks_per_second =
           (int)(msg->left - encoder_last.left) / time_diff.seconds();
-      RCLCPP_WARN(get_logger(),"%f",ticks_per_second);
+      RCLCPP_WARN(get_logger(), "%f", ticks_per_second);
 
       lwheel_vel =
           2 * M_PI * wheel_radius * ticks_per_second / this->ticks_per_rev;
@@ -99,11 +103,11 @@ private:
     // update buffer
     encoder_last = *msg;
 
-    // nav_msgs::msg::Odometry odom;
-    // odom.header.stamp = msg->header.stamp;
-    // odom.header.frame_id = "odom";
-    // odom.pose = this->pose;
-    // odom_publisher_->publish(odom);
+    nav_msgs::msg::Odometry odom;
+    odom.header.stamp = msg->header.stamp;
+    odom.header.frame_id = "odom";
+    odom.pose = this->pose;
+    odom_publisher_->publish(odom);
     geometry_msgs::msg::PoseWithCovarianceStamped pose_stamped;
     pose_stamped.pose = pose;
     pose_stamped.header.frame_id = "base_link";
@@ -127,7 +131,8 @@ private:
     pose.pose.position.y += twist.twist.linear.x * time_diff.seconds();
     tf2::Quaternion quat;
     tf2::fromMsg(pose.pose.orientation, quat);
-    quat.setRPY(0,0, quat.getAngle() + twist.twist.angular.z * time_diff.seconds());
+    quat.setRPY(0, 0,
+                quat.getAngle() + twist.twist.angular.z * time_diff.seconds());
     quat.normalize();
     pose.pose.orientation = tf2::toMsg(quat);
   }
@@ -141,8 +146,10 @@ private:
   geometry_msgs::msg::TwistWithCovariance twist;
   geometry_msgs::msg::PoseWithCovariance pose;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_publisher_;
-  rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pose_publisher;
-  rclcpp::Publisher<geometry_msgs::msg::TwistWithCovarianceStamped>::SharedPtr twist_publisher;
+  rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr
+      pose_publisher;
+  rclcpp::Publisher<geometry_msgs::msg::TwistWithCovarianceStamped>::SharedPtr
+      twist_publisher;
   rclcpp::Subscription<greeter_msgs::msg::EncoderTicks>::SharedPtr
       encoder_subscriber_;
 };

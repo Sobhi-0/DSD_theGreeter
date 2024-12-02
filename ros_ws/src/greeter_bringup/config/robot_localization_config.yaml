@@ -10,9 +10,9 @@ world_frame: "map"
 transform_time_offset: 0 # seconds
 transform_timeout: 0 # seconds, 0 results in non-blocking behavior
 
-imu0: "robot/imu/data"
-odom0: "wheel_encoder/odometry"
-odom1: "visual_odometry/odometry"
+imu0: "/imu"
+odom0: "/encoder_odom"
+# odom1: "visual_odometry/odometry"
 
 imu0_config: [false, false, false,
               false, false, true,
@@ -26,13 +26,14 @@ odom0_config: [true, true, false,
               false, false, true,
               false, false, false]
 
-odom1_config: [true, true, false,
-              false, false, true,
-              true, false, false,
-              false, false, true,
-              false, false, false]
+# odom1_config: [true, true, false,
+#               false, false, true,
+#               true, false, false,
+#               false, false, true,
+#               false, false, false]
+#
 
 imu0_queue_size: 3
 odom0_queue_size: 3
-odom1_queue_size: 3
+# odom1_queue_size: 3
 

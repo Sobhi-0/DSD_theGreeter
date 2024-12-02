@@ -47,7 +47,7 @@ def generate_launch_description():
                 output="screen",
                 parameters=[
                     {"encoder_topic": "/encoder_ticks"},
-                    {"odom_topic": "/odom"},
+                    {"odom_topic": "/encoder_odom"},
                     {"wheel_base": 0.18},
                     {"wheel_radius": 0.065},
                     {"ticks_per_rev": 890},

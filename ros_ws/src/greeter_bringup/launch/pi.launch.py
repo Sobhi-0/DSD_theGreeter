@@ -59,7 +59,7 @@ def generate_launch_description():
                     {"encoder_topic": "/encoder_ticks"},
                     {"odom_topic": "/encoder_odom"},
                     {"wheel_base": 0.18},
-                    {"wheel_radius": 0.065},
+                    {"wheel_radius": 0.035},
                     {"ticks_per_rev": 890},
                 ]
             ),

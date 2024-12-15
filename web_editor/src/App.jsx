@@ -1,17 +1,18 @@
 import React from 'react';
 import './App.css';
-import TileMap from './pages/TileMap';
+import SideNavBar from './components/SideNavBar';
+import { Outlet } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Map Editor</h1>
-      <div className='mss'>
 
-      </div>
-      <TileMap></TileMap>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+            <SideNavBar />  {/* Sidebar siempre visible */}
+            <main>
+                <Outlet/>
+            </main>
+        </div>
+    );
+};
 
 export default App;

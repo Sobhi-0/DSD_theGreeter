@@ -4,7 +4,6 @@ const TileMap = () => {
     const canvasRef = useRef(null);
     const [currentTool, setCurrentTool] = useState('none'); // 'none', 'draw', 'erase', 'special'
     const [isDragging, setIsDragging] = useState(false);
-    const [showJSON, setShowJSON] = useState(false);
 
     // Grid configuration
     const tileSize = 32;
@@ -152,17 +151,6 @@ const TileMap = () => {
         backgroundColor: '#68D391'
     };
 
-    const jsonDisplayStyle = {
-        padding: '16px',
-        backgroundColor: '#f7fafc',
-        borderRadius: '4px',
-        marginTop: '16px',
-        fontFamily: 'monospace',
-        whiteSpace: 'pre-wrap',
-        maxWidth: '100%',
-        overflowX: 'auto'
-    };
-
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '16px' }}>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -187,12 +175,6 @@ const TileMap = () => {
                     Special: {currentTool === 'special' ? 'On' : 'Off'}
                 </button>
 
-                <button
-                    onClick={() => setShowJSON(!showJSON)}
-                    style={showJSON ? activeButtonStyle : buttonStyle}
-                >
-                    {showJSON ? 'Hide JSON' : 'Show JSON'}
-                </button>
             </div>
 
             <canvas
@@ -205,12 +187,6 @@ const TileMap = () => {
                 onMouseUp={() => setIsDragging(false)}
                 onMouseMove={(e) => isDragging && handleCanvasClick(e)}
             />
-
-            {showJSON && (
-                <div>
-                    {JSON.stringify(grid, null, 2)}
-                </div>
-            )}
         </div>
     );
 };

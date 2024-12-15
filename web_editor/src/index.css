@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+
+  height: 100%;
+  margin: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -98,4 +104,60 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+/* Sidebar */
+
+
+
+
+.sidebar {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #032530;
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Esto asegura que el footer se quede abajo */
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1; /* Esto hace que la lista ocupe el espacio disponible */
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #10cc90;
+}
+
+.sidebar footer {
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin-top: auto; /* Esto asegura que el footer se quede al fondo */
 }

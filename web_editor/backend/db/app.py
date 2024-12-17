@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from devices.devices_model import get_device_by_entity, get_devices_count_by_state
+from devices.devices_model import get_device_by_entity, get_devices_count_by_state, get_all_lights
 
 app = Flask(__name__)
 
@@ -25,6 +25,12 @@ def get_devices_count():
         "state_counts": state_counts,
         "devices_info": devices_info
     })
+
+@app.route('/devices/lights', methods=['GET'])
+def get_lights():
+    # Obtener las luces con un patrón de entity_id (por ejemplo, todas las luces que empiezan con "light_")
+    lights = get_all_lights()
+    return jsonify(lights)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -19,7 +19,7 @@ const Home = () => {
             <div className="home-overlay">
                 <h1 className="home-heading">{welcomeText}</h1>
                 <p className="home-paragraph">
-                    This is the default route of the application.
+                    Workng on page...
                 </p>
             </div>
         </div>

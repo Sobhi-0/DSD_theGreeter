@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/App.css';
 import TileMap from '../components/TileMapEdit';
+import '../css/App.css';
 
 const MapEditor = () => {
     return (

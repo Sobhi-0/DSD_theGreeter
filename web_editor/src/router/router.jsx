@@ -1,9 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "../App"; // Main layout component
+import Devices from "../components/DevicesList";
+import Contact from "../pages/Contact"; // Contact component for /contact route
 import Home from "../pages/Home"; // Home component for /home route
 import MapEditor from "../pages/MapEditor"; // MapEditor component for /map route
-import Devices from "../components/DevicesList";
-
 
 const router = createBrowserRouter([
     {
@@ -22,10 +22,13 @@ const router = createBrowserRouter([
                 path: "/map",
                 element: <MapEditor />, // Render MapEditor at /map
             },
-
             {
                 path: "/devices",
-                element: <Devices />, // Render MapEditor at /map
+                element: <Devices />, // Render DevicesList at /devices
+            },
+            {
+                path: "/contact",
+                element: <Contact />, // Render Contact component at /contact
             },
         ],
     },

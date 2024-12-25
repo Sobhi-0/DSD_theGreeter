@@ -31,6 +31,16 @@ def generate_launch_description():
                     ]
                 )
             ),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    [
+                        os.path.join(
+                            get_package_share_directory("greeter_bringup"), "launch"
+                        ),
+                        "/sphero_rvr_bringup.launch.py",
+                    ]
+                )
+            ),
             Node(
                 package="sphero_rvr",
                 executable="sphero_rvr_node",

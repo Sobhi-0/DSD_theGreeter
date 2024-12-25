@@ -18,9 +18,9 @@ using std::placeholders::_1;
 
 class PathRecorderNode : public rclcpp::Node {
 public:
-  PathRecorderNode() : Node("minimal_publisher") {
+  PathRecorderNode() : Node("PathRecorder") {
     publisher_ =
-        this->create_publisher<geometry_msgs::msg::PolygonStamped>("topic", 10);
+        this->create_publisher<geometry_msgs::msg::PolygonStamped>("path", 10);
     subscription_ = this->create_subscription<nav_msgs::msg::Odometry>(
         "/odometry/filtered", 10,
         std::bind(&PathRecorderNode::topic_callback, this, _1));

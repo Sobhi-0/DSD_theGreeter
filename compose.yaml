@@ -15,7 +15,7 @@ services:
       # - /dev/input/js0
       - /dev/ttyS0
     volumes:
-      - ~/DSD_theGreeter/ros_ws:/ros_ws/:rw
+      - /Users/maheenghani/TheGreeterProject/DSD_theGreeter/ros_ws:/ros_ws/:rw
       - /tmp/.X11-unix/:/tmp/.X11-unix/:rw
       - /dev/video0:/dev/video0:rw
     network_mode: host

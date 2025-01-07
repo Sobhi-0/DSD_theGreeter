@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 const App = () => {
     return (
         <div>
-            <SideNavBar />  {/* Sidebar siempre visible */}
+            <SideNavBar />  {/*Allways visible */}
             <main>
                 <Outlet/>
             </main>

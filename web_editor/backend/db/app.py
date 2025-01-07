@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, request
 from devices.devices_model import get_device_by_entity, get_devices_count_by_state, get_all_lights
+app = Flask(__name__)   
 
-app = Flask(__name__)
+
 
 @app.route('/devices/<entity_id>', methods=['GET'])
 def get_device(entity_id):

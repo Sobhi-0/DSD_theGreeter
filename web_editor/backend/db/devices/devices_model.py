@@ -82,3 +82,6 @@ def get_all_lights():
     unique_lights_list = list(unique_lights.values())
 
     return unique_lights_list
+
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>home_assistant</name>
+  <version>0.0.0</version>
+  <description>Home Assistant ROS 2 Interface Node</description>
+  <maintainer email="maheenghani@todo.todo">maheenghani</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>std_srvs</depend>
+  <depend>requests</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

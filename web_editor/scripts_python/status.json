@@ -1,0 +1,4571 @@
+[
+    {
+        "entity_id": "person.smartroom",
+        "state": "unknown",
+        "attributes": {
+            "editable": true,
+            "id": "smartroom",
+            "device_trackers": [
+                "device_tracker.android_tablet"
+            ],
+            "user_id": "ce031388caad41aa80be1c77c2011392",
+            "friendly_name": "Smartroom"
+        },
+        "last_changed": "2024-10-17T14:06:27.310349+00:00",
+        "last_reported": "2024-10-17T14:06:27.336539+00:00",
+        "last_updated": "2024-10-17T14:06:27.336539+00:00",
+        "context": {
+            "id": "01JADCT808PRTT29N4ST3P55FR",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "person.test",
+        "state": "unknown",
+        "attributes": {
+            "editable": true,
+            "id": "test",
+            "device_trackers": [],
+            "user_id": "98afc55515384f1f8de9261ee035d64d",
+            "friendly_name": "Test"
+        },
+        "last_changed": "2024-10-17T09:04:22.664512+00:00",
+        "last_reported": "2024-10-17T09:04:30.753970+00:00",
+        "last_updated": "2024-10-17T09:04:30.753970+00:00",
+        "context": {
+            "id": "01JACVHC11BCT1WQ6YS8Q71755",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "person.maghsood",
+        "state": "unknown",
+        "attributes": {
+            "editable": true,
+            "id": "maghsood",
+            "device_trackers": [],
+            "user_id": "b7fb7d6f861647109adda64f58e7fb75",
+            "friendly_name": "Maghsood"
+        },
+        "last_changed": "2024-10-17T09:04:22.664631+00:00",
+        "last_reported": "2024-10-17T09:04:30.754042+00:00",
+        "last_updated": "2024-10-17T09:04:30.754042+00:00",
+        "context": {
+            "id": "01JACVHC12Y8GFK2PQFRHKJQVH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "person.student",
+        "state": "unknown",
+        "attributes": {
+            "editable": true,
+            "id": "student",
+            "device_trackers": [],
+            "user_id": "d206bcf362ab4f198b2f56923bc0ea86",
+            "friendly_name": "Student"
+        },
+        "last_changed": "2024-10-17T09:04:22.664732+00:00",
+        "last_reported": "2024-10-17T09:04:30.754108+00:00",
+        "last_updated": "2024-10-17T09:04:30.754108+00:00",
+        "context": {
+            "id": "01JACVHC126V3M332H0DEGQ31S",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.home_assistant_supervisor_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": true,
+            "installed_version": "2024.12.3",
+            "in_progress": false,
+            "latest_version": "2024.12.3",
+            "release_summary": null,
+            "release_url": "https://github.com/home-assistant/supervisor/releases/tag/2024.12.3",
+            "skipped_version": null,
+            "title": "Home Assistant Supervisor",
+            "entity_picture": "https://brands.home-assistant.io/hassio/icon.png",
+            "friendly_name": "Home Assistant Supervisor Update",
+            "supported_features": 1
+        },
+        "last_changed": "2024-11-11T14:14:23.040918+00:00",
+        "last_reported": "2025-01-03T19:34:23.041943+00:00",
+        "last_updated": "2025-01-03T19:34:23.041943+00:00",
+        "context": {
+            "id": "01JGPTJRJ14Q8NBWTY4EDSEXGD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.home_assistant_core_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "2024.6.4",
+            "in_progress": false,
+            "latest_version": "2025.1.2",
+            "release_summary": null,
+            "release_url": "https://www.home-assistant.io/latest-release-notes/",
+            "skipped_version": null,
+            "title": "Home Assistant Core",
+            "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+            "friendly_name": "Home Assistant Core Update",
+            "supported_features": 11
+        },
+        "last_changed": "2024-10-17T09:04:22.991206+00:00",
+        "last_reported": "2025-01-10T02:09:23.025301+00:00",
+        "last_updated": "2025-01-10T02:09:23.025301+00:00",
+        "context": {
+            "id": "01JH6ZJB2HQMHHE3Z093EAGYPR",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.advanced_ssh_web_terminal_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "18.0.0",
+            "in_progress": false,
+            "latest_version": "20.0.0",
+            "release_summary": "## What\u2019s changed\n\n## \ud83d\udc1b Bug fixes\n\n- Update profile filename for zsh @jon-hedgerows ([#821](https://github.com/hassio-addons/addon-ssh/pull/821))\n\n## \ud83e\uddf0 Maintenance\n\n- \ud83c\udf86 Updates maintenance/license year to 2025 @frenck ([#822](https://github.com/hassio-add",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "Advanced SSH & Web Terminal",
+            "entity_picture": "/api/hassio/addons/a0d7b954_ssh/icon",
+            "friendly_name": "Advanced SSH & Web Terminal Update",
+            "supported_features": 25
+        },
+        "last_changed": "2024-10-17T09:04:22.992918+00:00",
+        "last_reported": "2025-01-04T16:34:23.038913+00:00",
+        "last_updated": "2025-01-04T16:34:23.038913+00:00",
+        "context": {
+            "id": "01JGS2NWNYV3630C45013R74TK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.mosquitto_broker_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "6.4.1",
+            "in_progress": false,
+            "latest_version": "6.5.0",
+            "release_summary": "# Changelog\n\n## 6.5.0\n\n- Update base image to Debian 12 (bookworm)\n- Update mosquitto to version 2.0.20\n- Update mosquitto-go-auth to version 2.1.0\n- Update libwebsockets to version 4.3.3\n\n#",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "Mosquitto broker",
+            "entity_picture": "/api/hassio/addons/core_mosquitto/icon",
+            "friendly_name": "Mosquitto broker Update",
+            "supported_features": 25
+        },
+        "last_changed": "2025-01-13T22:39:23.042984+00:00",
+        "last_reported": "2025-01-13T22:39:23.042984+00:00",
+        "last_updated": "2025-01-13T22:39:23.042984+00:00",
+        "context": {
+            "id": "01JHGX4PD29HVSPMKA0GWER7JW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.file_editor_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "5.8.0",
+            "in_progress": false,
+            "latest_version": "5.8.0",
+            "release_summary": "# Changelog\n\n## 5.8.0\n\n- Update base image to Alpine 3.19\n\n## 5.7.0\n\n- Use new location for accessing the Home Assistant configuration folder using `/homeassistant`\n- Add access to the new public configuration folders of add-ons\n- Upgrade to Alpine 3.18\n-",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "File editor",
+            "entity_picture": "/api/hassio/addons/core_configurator/icon",
+            "friendly_name": "File editor Update",
+            "supported_features": 25
+        },
+        "last_changed": "2024-10-17T09:04:22.993830+00:00",
+        "last_reported": "2024-10-17T09:04:22.993830+00:00",
+        "last_updated": "2024-10-17T09:04:22.993830+00:00",
+        "context": {
+            "id": "01JACVH4EH0E0P31QFR4EFTMDC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.home_assistant_operating_system_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "12.4",
+            "in_progress": false,
+            "latest_version": "14.1",
+            "release_summary": null,
+            "release_url": "https://github.com/home-assistant/operating-system/releases/tag/14.1",
+            "skipped_version": null,
+            "title": "Home Assistant Operating System",
+            "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+            "friendly_name": "Home Assistant Operating System Update",
+            "supported_features": 3
+        },
+        "last_changed": "2024-10-17T09:04:22.999339+00:00",
+        "last_reported": "2024-12-19T18:14:23.032506+00:00",
+        "last_updated": "2024-12-19T18:14:23.032506+00:00",
+        "context": {
+            "id": "01JFG21G1RXGRD9HKHN9NV271N",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "zone.home",
+        "state": "0",
+        "attributes": {
+            "latitude": 59.61821035,
+            "longitude": 16.541635659461644,
+            "radius": 100,
+            "passive": false,
+            "persons": [],
+            "editable": true,
+            "icon": "mdi:home",
+            "friendly_name": "Home"
+        },
+        "last_changed": "2024-10-17T14:06:27.310500+00:00",
+        "last_reported": "2024-10-17T14:06:27.310500+00:00",
+        "last_updated": "2024-10-17T14:06:27.310500+00:00",
+        "context": {
+            "id": "01JADCT7ZEJ8W90928A1R9QXJC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "conversation.home_assistant",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Home Assistant"
+        },
+        "last_changed": "2024-10-17T09:04:24.134443+00:00",
+        "last_reported": "2024-10-17T09:04:24.134443+00:00",
+        "last_updated": "2024-10-17T09:04:24.134443+00:00",
+        "context": {
+            "id": "01JACVH5J6D5F66YQ0NH3ACJ8T",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.192_168_8_125",
+        "state": "idle",
+        "attributes": {
+            "access_token": "1ac506e9225b79a023e127cbed8f3be73442ebcc1277a9715a9cd905aac6b8d",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.192_168_8_125?token=1ac506e9225b79a023e127cbed8f3be73442ebcc1277a9715a9cd905aac6b8d",
+            "friendly_name": "Fridge Dlink Camera",
+            "supported_features": 2
+        },
+        "last_changed": "2025-01-20T21:11:25.435026+00:00",
+        "last_reported": "2025-01-20T22:44:50.695633+00:00",
+        "last_updated": "2025-01-20T22:44:50.695633+00:00",
+        "context": {
+            "id": "01JJ2Y7QC7G4485MYXMDPJ0AEN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.192_168_8_100",
+        "state": "idle",
+        "attributes": {
+            "access_token": "26bc79e0df45f0517b40011734159619b1c3c4376ebf34ae31021b7c63676baf",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.192_168_8_100?token=26bc79e0df45f0517b40011734159619b1c3c4376ebf34ae31021b7c63676baf",
+            "friendly_name": "Fisheye Dlink Camera",
+            "supported_features": 2
+        },
+        "last_changed": "2024-11-01T09:07:06.293546+00:00",
+        "last_reported": "2025-01-20T22:44:50.695751+00:00",
+        "last_updated": "2025-01-20T22:44:50.695751+00:00",
+        "context": {
+            "id": "01JJ2Y7QC73AQ2BAAFWN27B6G0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sun.sun",
+        "state": "below_horizon",
+        "attributes": {
+            "next_dawn": "2025-01-21T06:37:48.933809+00:00",
+            "next_dusk": "2025-01-21T15:33:14.722628+00:00",
+            "next_midnight": "2025-01-20T23:05:12+00:00",
+            "next_noon": "2025-01-21T11:05:04+00:00",
+            "next_rising": "2025-01-21T07:28:36.803272+00:00",
+            "next_setting": "2025-01-21T14:42:23.108483+00:00",
+            "elevation": -49.85,
+            "azimuth": 347.96,
+            "rising": false,
+            "friendly_name": "Sun"
+        },
+        "last_changed": "2025-01-20T14:43:58.800982+00:00",
+        "last_reported": "2025-01-20T22:32:09.652378+00:00",
+        "last_updated": "2025-01-20T22:32:09.652378+00:00",
+        "context": {
+            "id": "01JJ2XGG5M3WRR7DSF3K2KVCQX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_dawn",
+        "state": "2025-01-21T06:37:48+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next dawn"
+        },
+        "last_changed": "2025-01-20T06:39:18.880910+00:00",
+        "last_reported": "2025-01-20T06:39:18.880910+00:00",
+        "last_updated": "2025-01-20T06:39:18.880910+00:00",
+        "context": {
+            "id": "01JJ16ZSB06HBS2CCN24QAPX5Z",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_dusk",
+        "state": "2025-01-21T15:33:14+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next dusk"
+        },
+        "last_changed": "2025-01-20T15:31:09.652748+00:00",
+        "last_reported": "2025-01-20T15:31:09.652748+00:00",
+        "last_updated": "2025-01-20T15:31:09.652748+00:00",
+        "context": {
+            "id": "01JJ25DM6MBFX2AZ4QCHWHKHDF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_midnight",
+        "state": "2025-01-20T23:05:12+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next midnight"
+        },
+        "last_changed": "2025-01-19T23:04:55.006796+00:00",
+        "last_reported": "2025-01-19T23:04:55.006796+00:00",
+        "last_updated": "2025-01-19T23:04:55.006796+00:00",
+        "context": {
+            "id": "01JJ0CZREYF6XSNV9YCAZBD32J",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_noon",
+        "state": "2025-01-21T11:05:04+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next noon"
+        },
+        "last_changed": "2025-01-20T11:04:46.002589+00:00",
+        "last_reported": "2025-01-20T11:04:46.002589+00:00",
+        "last_updated": "2025-01-20T11:04:46.002589+00:00",
+        "context": {
+            "id": "01JJ1P5V5JBYTPCWGSXVAGZ3K4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_rising",
+        "state": "2025-01-21T07:28:36+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next rising"
+        },
+        "last_changed": "2025-01-20T07:30:26.085762+00:00",
+        "last_reported": "2025-01-20T07:30:26.085762+00:00",
+        "last_updated": "2025-01-20T07:30:26.085762+00:00",
+        "context": {
+            "id": "01JJ19XCN5BQXX4ZV1P22JXHKB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_setting",
+        "state": "2025-01-21T14:42:23+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next setting"
+        },
+        "last_changed": "2025-01-20T14:39:58.799327+00:00",
+        "last_reported": "2025-01-20T14:39:58.799327+00:00",
+        "last_updated": "2025-01-20T14:39:58.799327+00:00",
+        "context": {
+            "id": "01JJ22FXAFDKVVTF511ZR54QZ7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.android_tablet",
+        "state": "unknown",
+        "attributes": {
+            "source_type": "gps",
+            "friendly_name": "Android Tablet"
+        },
+        "last_changed": "2024-10-17T09:04:27.003849+00:00",
+        "last_reported": "2024-10-17T09:04:27.003849+00:00",
+        "last_updated": "2024-10-17T09:04:27.003849+00:00",
+        "context": {
+            "id": "01JACVH8BVPAHW2THWYBHM1X8F",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.android_tablet_battery_level",
+        "state": "17",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "icon": "mdi:battery-10",
+            "friendly_name": "Android Tablet Battery level"
+        },
+        "last_changed": "2025-01-08T02:04:30.730421+00:00",
+        "last_reported": "2025-01-08T02:04:30.740088+00:00",
+        "last_updated": "2025-01-08T02:04:30.730421+00:00",
+        "context": {
+            "id": "01JH1TFZMAEXF4YQT3RAMNNWZ1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.android_tablet_battery_state",
+        "state": "discharging",
+        "attributes": {
+            "options": [
+                "charging",
+                "discharging",
+                "full",
+                "not_charging"
+            ],
+            "device_class": "enum",
+            "icon": "mdi:battery-minus",
+            "friendly_name": "Android Tablet Battery state"
+        },
+        "last_changed": "2024-12-03T17:26:52.122526+00:00",
+        "last_reported": "2024-12-03T17:26:52.127017+00:00",
+        "last_updated": "2024-12-03T17:26:52.122526+00:00",
+        "context": {
+            "id": "01JE6RYZYTW5TZJ229JM6XKCVE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.android_tablet_charger_type",
+        "state": "none",
+        "attributes": {
+            "options": [
+                "ac",
+                "usb",
+                "wireless",
+                "dock",
+                "none"
+            ],
+            "device_class": "enum",
+            "icon": "mdi:battery",
+            "friendly_name": "Android Tablet Charger type"
+        },
+        "last_changed": "2024-12-03T17:26:52.122801+00:00",
+        "last_reported": "2024-12-03T17:26:52.127206+00:00",
+        "last_updated": "2024-12-03T17:26:52.122801+00:00",
+        "context": {
+            "id": "01JE6RYZYTN1FTJRMPW4EXK0FS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.water_sensor",
+        "state": "off",
+        "attributes": {
+            "on": true,
+            "temperature": 31.0,
+            "device_class": "moisture",
+            "friendly_name": "Water Sensor"
+        },
+        "last_changed": "2024-10-17T09:04:27.062021+00:00",
+        "last_reported": "2025-01-20T21:47:48.290853+00:00",
+        "last_updated": "2025-01-20T21:47:48.290046+00:00",
+        "context": {
+            "id": "01JJ2TZ9622M7AB6D3TVCZ1D19",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "climate.lumi_airrtc_agl001",
+        "state": "heat",
+        "attributes": {
+            "hvac_modes": [
+                "heat",
+                "off",
+                "auto"
+            ],
+            "min_temp": 7,
+            "max_temp": 35,
+            "preset_modes": [
+                "auto",
+                "boost",
+                "comfort",
+                "complex",
+                "eco",
+                "holiday",
+                "manual"
+            ],
+            "current_temperature": 24.1,
+            "temperature": 22.5,
+            "hvac_action": "heating",
+            "preset_mode": "manual",
+            "offset": 0,
+            "locked": false,
+            "friendly_name": "lumi.airrtc.agl001",
+            "supported_features": 401
+        },
+        "last_changed": "2024-10-17T09:04:27.072788+00:00",
+        "last_reported": "2025-01-20T22:12:24.219105+00:00",
+        "last_updated": "2025-01-20T22:12:04.370684+00:00",
+        "context": {
+            "id": "01JJ2WBQ4JDYPZD9H033XQE8J0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "cover.window_covering_device_2",
+        "state": "closed",
+        "attributes": {
+            "current_position": 0,
+            "device_class": "shade",
+            "friendly_name": "Window covering device 2",
+            "supported_features": 15
+        },
+        "last_changed": "2024-10-17T09:04:27.074965+00:00",
+        "last_reported": "2024-10-17T09:04:27.185827+00:00",
+        "last_updated": "2024-10-17T09:04:27.074965+00:00",
+        "context": {
+            "id": "01JACVH8E288WH9STDQ2Q3QKG6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.led_rgb_square",
+        "state": "off",
+        "attributes": {
+            "min_color_temp_kelvin": 1538,
+            "max_color_temp_kelvin": 7142,
+            "min_mireds": 140,
+            "max_mireds": 650,
+            "effect_list": [
+                "colorloop"
+            ],
+            "supported_color_modes": [
+                "color_temp",
+                "hs",
+                "xy"
+            ],
+            "effect": null,
+            "color_mode": null,
+            "brightness": null,
+            "color_temp_kelvin": null,
+            "color_temp": null,
+            "hs_color": null,
+            "rgb_color": null,
+            "xy_color": null,
+            "is_deconz_group": false,
+            "friendly_name": "LED RGB Square",
+            "supported_features": 44
+        },
+        "last_changed": "2025-01-17T14:36:24.457243+00:00",
+        "last_reported": "2025-01-17T14:36:24.457243+00:00",
+        "last_updated": "2025-01-17T14:36:24.457243+00:00",
+        "context": {
+            "id": "01JHTB37095DE5SK0VWD4YH1W9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.led_rgb_rectangle_window",
+        "state": "off",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6535,
+            "min_mireds": 153,
+            "max_mireds": 500,
+            "effect_list": [
+                "colorloop"
+            ],
+            "supported_color_modes": [
+                "color_temp",
+                "hs",
+                "xy"
+            ],
+            "effect": null,
+            "color_mode": null,
+            "brightness": null,
+            "color_temp_kelvin": null,
+            "color_temp": null,
+            "hs_color": null,
+            "rgb_color": null,
+            "xy_color": null,
+            "is_deconz_group": false,
+            "friendly_name": "LED RGB Rectangle Window",
+            "supported_features": 44
+        },
+        "last_changed": "2025-01-17T14:36:24.456662+00:00",
+        "last_reported": "2025-01-17T14:36:24.456662+00:00",
+        "last_updated": "2025-01-17T14:36:24.456662+00:00",
+        "context": {
+            "id": "01JHTB37088BSKWC5SKE2Z59JA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.led_rgb_stick_l_monitor_array",
+        "state": "off",
+        "attributes": {
+            "min_color_temp_kelvin": 1538,
+            "max_color_temp_kelvin": 7142,
+            "min_mireds": 140,
+            "max_mireds": 650,
+            "effect_list": [
+                "colorloop"
+            ],
+            "supported_color_modes": [
+                "color_temp",
+                "hs",
+                "xy"
+            ],
+            "effect": null,
+            "color_mode": null,
+            "brightness": null,
+            "color_temp_kelvin": null,
+            "color_temp": null,
+            "hs_color": null,
+            "rgb_color": null,
+            "xy_color": null,
+            "is_deconz_group": false,
+            "friendly_name": "LED RGB Stick L monitor-array",
+            "supported_features": 44
+        },
+        "last_changed": "2025-01-17T14:36:24.457000+00:00",
+        "last_reported": "2025-01-17T14:36:24.648582+00:00",
+        "last_updated": "2025-01-17T14:36:24.457000+00:00",
+        "context": {
+            "id": "01JHTB3708FSKJGJD2QKGZKGC1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.led_rgb_stick_r_monitor_array",
+        "state": "off",
+        "attributes": {
+            "min_color_temp_kelvin": 1538,
+            "max_color_temp_kelvin": 7142,
+            "min_mireds": 140,
+            "max_mireds": 650,
+            "effect_list": [
+                "colorloop"
+            ],
+            "supported_color_modes": [
+                "color_temp",
+                "hs",
+                "xy"
+            ],
+            "effect": null,
+            "color_mode": null,
+            "brightness": null,
+            "color_temp_kelvin": null,
+            "color_temp": null,
+            "hs_color": null,
+            "rgb_color": null,
+            "xy_color": null,
+            "is_deconz_group": false,
+            "friendly_name": "LED RGB Stick R monitor-array",
+            "supported_features": 44
+        },
+        "last_changed": "2025-01-17T14:36:24.457464+00:00",
+        "last_reported": "2025-01-17T14:36:24.457464+00:00",
+        "last_updated": "2025-01-17T14:36:24.457464+00:00",
+        "context": {
+            "id": "01JHTB37094N4JNRS9WT6WHJPM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.led_rgb_stick_fisheye",
+        "state": "unavailable",
+        "attributes": {
+            "min_color_temp_kelvin": 1538,
+            "max_color_temp_kelvin": 7142,
+            "min_mireds": 140,
+            "max_mireds": 650,
+            "effect_list": [
+                "colorloop"
+            ],
+            "supported_color_modes": [
+                "color_temp",
+                "hs",
+                "xy"
+            ],
+            "friendly_name": "LED RGB Stick Fisheye",
+            "supported_features": 44
+        },
+        "last_changed": "2024-11-22T15:51:29.835532+00:00",
+        "last_reported": "2024-11-22T15:51:29.835532+00:00",
+        "last_updated": "2024-11-22T15:51:29.835532+00:00",
+        "context": {
+            "id": "01JDA94ESBJD21Z5CRQG1YV93M",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.led_rgb_rect_server",
+        "state": "off",
+        "attributes": {
+            "min_color_temp_kelvin": 1538,
+            "max_color_temp_kelvin": 7142,
+            "min_mireds": 140,
+            "max_mireds": 650,
+            "effect_list": [
+                "colorloop"
+            ],
+            "supported_color_modes": [
+                "color_temp",
+                "hs",
+                "xy"
+            ],
+            "effect": null,
+            "color_mode": null,
+            "brightness": null,
+            "color_temp_kelvin": null,
+            "color_temp": null,
+            "hs_color": null,
+            "rgb_color": null,
+            "xy_color": null,
+            "is_deconz_group": false,
+            "friendly_name": "LED RGB Rect Server",
+            "supported_features": 44
+        },
+        "last_changed": "2025-01-17T14:36:24.457671+00:00",
+        "last_reported": "2025-01-17T14:36:24.457671+00:00",
+        "last_updated": "2025-01-17T14:36:24.457671+00:00",
+        "context": {
+            "id": "01JHTB3709F51XTB3YGJK6AXSZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.phoscon_all_off",
+        "state": "off",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6535,
+            "min_mireds": 153,
+            "max_mireds": 500,
+            "effect_list": [
+                "colorloop"
+            ],
+            "supported_color_modes": [
+                "color_temp",
+                "hs",
+                "xy"
+            ],
+            "effect": null,
+            "color_mode": null,
+            "brightness": null,
+            "color_temp_kelvin": null,
+            "color_temp": null,
+            "hs_color": null,
+            "rgb_color": null,
+            "xy_color": null,
+            "is_deconz_group": true,
+            "all_on": false,
+            "friendly_name": "Phoscon_All_Off",
+            "supported_features": 44
+        },
+        "last_changed": "2025-01-17T14:36:24.457879+00:00",
+        "last_reported": "2025-01-17T14:36:24.648715+00:00",
+        "last_updated": "2025-01-17T14:36:24.457879+00:00",
+        "context": {
+            "id": "01JHTB36ZMC529H8G95792T5D7",
+            "parent_id": "01JHTB36ZMZTST0ZJHH1SZ7T43",
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.humidity_11",
+        "state": "22.34",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "unit_of_measurement": "%",
+            "device_class": "humidity",
+            "friendly_name": "Humidity 11"
+        },
+        "last_changed": "2025-01-20T22:35:07.566912+00:00",
+        "last_reported": "2025-01-20T22:35:07.566912+00:00",
+        "last_updated": "2025-01-20T22:35:07.566912+00:00",
+        "context": {
+            "id": "01JJ2XNXXEMF6ZRQNPCWVG8668",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.humidity_11_battery",
+        "state": "82",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Humidity 11 Battery"
+        },
+        "last_changed": "2025-01-19T05:00:34.868021+00:00",
+        "last_reported": "2025-01-19T05:00:34.868406+00:00",
+        "last_updated": "2025-01-19T05:00:34.868021+00:00",
+        "context": {
+            "id": "01JHYEY95MG02DG9QP802DPH6N",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.temperature_12",
+        "state": "23.71",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "unit_of_measurement": "\u00b0C",
+            "device_class": "temperature",
+            "friendly_name": "Temperature 12"
+        },
+        "last_changed": "2025-01-20T22:35:07.565583+00:00",
+        "last_reported": "2025-01-20T22:35:07.565583+00:00",
+        "last_updated": "2025-01-20T22:35:07.565583+00:00",
+        "context": {
+            "id": "01JJ2XNXXDSSHT3KM0KB1FTHDH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.pressure_13",
+        "state": "1016",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "unit_of_measurement": "hPa",
+            "device_class": "pressure",
+            "friendly_name": "Pressure 13"
+        },
+        "last_changed": "2025-01-20T22:35:07.567180+00:00",
+        "last_reported": "2025-01-20T22:35:07.567180+00:00",
+        "last_updated": "2025-01-20T22:35:07.567180+00:00",
+        "context": {
+            "id": "01JJ2XNXXFDPP8815JXHSTF02P",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.water_sensor_battery",
+        "state": "100",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "temperature": 31.0,
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Water Sensor Battery"
+        },
+        "last_changed": "2024-10-17T09:04:27.103065+00:00",
+        "last_reported": "2025-01-20T21:47:48.290951+00:00",
+        "last_updated": "2025-01-20T21:47:48.290422+00:00",
+        "context": {
+            "id": "01JJ2TZ96224JF0AF9EQPHDWZ1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.water_sensor_temperature",
+        "state": "31.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "\u00b0C",
+            "device_class": "temperature",
+            "friendly_name": "Water Sensor Temperature"
+        },
+        "last_changed": "2025-01-20T21:47:48.290590+00:00",
+        "last_reported": "2025-01-20T21:47:48.290590+00:00",
+        "last_updated": "2025-01-20T21:47:48.290590+00:00",
+        "context": {
+            "id": "01JJ2TZ962KSPEV9G4ACE6YM9G",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.ts004f_battery",
+        "state": "91",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "event_id": "ts004f",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "TS004F Battery"
+        },
+        "last_changed": "2025-01-17T14:46:20.048549+00:00",
+        "last_reported": "2025-01-17T14:46:20.048549+00:00",
+        "last_updated": "2025-01-17T14:46:20.048549+00:00",
+        "context": {
+            "id": "01JHTBNCMG8PYSNCSKEDQN9YXD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.battery_23_battery",
+        "state": "26",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Battery 23 Battery"
+        },
+        "last_changed": "2025-01-14T03:15:47.461162+00:00",
+        "last_reported": "2025-01-14T03:15:47.461162+00:00",
+        "last_updated": "2025-01-14T03:15:47.461162+00:00",
+        "context": {
+            "id": "01JHHCYT45B22N6BFM5DXNV436",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.lumi_airrtc_agl001_battery",
+        "state": "99",
+        "attributes": {
+            "state_class": "measurement",
+            "on": true,
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "lumi.airrtc.agl001 Battery"
+        },
+        "last_changed": "2025-01-20T22:12:19.467405+00:00",
+        "last_reported": "2025-01-20T22:12:24.219358+00:00",
+        "last_updated": "2025-01-20T22:12:19.467405+00:00",
+        "context": {
+            "id": "01JJ2WC5WB5V3XJ88WZGTWF2AY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.home_assistant_v2_db_size",
+        "state": "3484.54",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "MB",
+            "device_class": "data_size",
+            "friendly_name": "HASS DB Size"
+        },
+        "last_changed": "2025-01-20T22:43:26.869957+00:00",
+        "last_reported": "2025-01-20T22:43:26.869957+00:00",
+        "last_updated": "2025-01-20T22:43:26.869957+00:00",
+        "context": {
+            "id": "01JJ2Y55GNC501KJGBX68X6M20",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "weather.forecast_home",
+        "state": "fog",
+        "attributes": {
+            "temperature": 0.7,
+            "dew_point": 0.5,
+            "temperature_unit": "\u00b0C",
+            "humidity": 100,
+            "cloud_coverage": 100.0,
+            "pressure": 1019.1,
+            "pressure_unit": "hPa",
+            "wind_bearing": 106.0,
+            "wind_gust_speed": 14.8,
+            "wind_speed": 8.6,
+            "wind_speed_unit": "km/h",
+            "visibility_unit": "km",
+            "precipitation_unit": "mm",
+            "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+            "friendly_name": "Forecast Home",
+            "supported_features": 3
+        },
+        "last_changed": "2025-01-20T15:14:33.178806+00:00",
+        "last_reported": "2025-01-20T22:34:33.232257+00:00",
+        "last_updated": "2025-01-20T22:34:33.232257+00:00",
+        "context": {
+            "id": "01JJ2XMWCGYTQYE93PAXQJGF6E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "tts.google_en_com",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Google en com"
+        },
+        "last_changed": "2024-10-17T09:04:27.358423+00:00",
+        "last_reported": "2024-10-17T09:04:27.358423+00:00",
+        "last_updated": "2024-10-17T09:04:27.358423+00:00",
+        "context": {
+            "id": "01JACVH8PYFQ7M888Q4C9YAR31",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "todo.shopping_list",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "Shopping List",
+            "supported_features": 15
+        },
+        "last_changed": "2024-10-17T09:04:27.384304+00:00",
+        "last_reported": "2024-10-17T09:04:27.384304+00:00",
+        "last_updated": "2024-10-17T09:04:27.384304+00:00",
+        "context": {
+            "id": "01JACVH8QRNBAEJRMYPV7Z5Y3F",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.hacs_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "1.34.0",
+            "in_progress": false,
+            "latest_version": "2.0.1",
+            "release_summary": null,
+            "release_url": "https://github.com/hacs/integration/releases/2.0.1",
+            "skipped_version": null,
+            "title": null,
+            "entity_picture": "https://brands.home-assistant.io/_/hacs/icon.png",
+            "friendly_name": "HACS update",
+            "supported_features": 23
+        },
+        "last_changed": "2024-11-29T12:23:46.631105+00:00",
+        "last_reported": "2024-11-29T12:23:46.631105+00:00",
+        "last_updated": "2024-11-29T12:23:46.631105+00:00",
+        "context": {
+            "id": "01JDVY14P77HK0CW9MPMAG4789",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.frigate_card_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "v5.2.0",
+            "in_progress": false,
+            "latest_version": "v5.2.0",
+            "release_summary": null,
+            "release_url": "https://github.com/dermotduffy/frigate-hass-card/releases/v5.2.0",
+            "skipped_version": null,
+            "title": null,
+            "friendly_name": "Frigate Card update",
+            "supported_features": 23
+        },
+        "last_changed": "2024-11-29T12:23:46.631856+00:00",
+        "last_reported": "2024-11-29T12:23:46.631856+00:00",
+        "last_updated": "2024-11-29T12:23:46.631856+00:00",
+        "context": {
+            "id": "01JDVY14P75EA1RRJSY1E5MDAJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.frigate_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "v5.2.0",
+            "in_progress": false,
+            "latest_version": "v5.5.1",
+            "release_summary": null,
+            "release_url": "https://github.com/blakeblackshear/frigate-hass-integration/releases/v5.5.1",
+            "skipped_version": null,
+            "title": null,
+            "entity_picture": "https://brands.home-assistant.io/_/frigate/icon.png",
+            "friendly_name": "Frigate update",
+            "supported_features": 23
+        },
+        "last_changed": "2024-11-29T12:23:46.638636+00:00",
+        "last_reported": "2024-11-29T12:23:46.638636+00:00",
+        "last_updated": "2024-11-29T12:23:46.638636+00:00",
+        "context": {
+            "id": "01JDVY14PE2GST7HC7D1JGS9R7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "automation.deconz2_ts004f_4_button",
+        "state": "on",
+        "attributes": {
+            "id": "1721734742554",
+            "last_triggered": "2025-01-17T14:36:24.437108+00:00",
+            "mode": "restart",
+            "current": 0,
+            "friendly_name": "deCONZ2 - TS004F 4 button"
+        },
+        "last_changed": "2024-11-03T20:38:39.130423+00:00",
+        "last_reported": "2025-01-17T14:36:24.768666+00:00",
+        "last_updated": "2025-01-17T14:36:24.768666+00:00",
+        "context": {
+            "id": "01JHTB36ZMC529H8G95792T5D7",
+            "parent_id": "01JHTB36ZMZTST0ZJHH1SZ7T43",
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.b535_333_mobile_connection",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "4G Router Mobile connection"
+        },
+        "last_changed": "2024-10-17T09:04:29.522750+00:00",
+        "last_reported": "2024-10-17T09:05:01.109500+00:00",
+        "last_updated": "2024-10-17T09:04:29.522750+00:00",
+        "context": {
+            "id": "01JACVHATJ7WGBK83ZYRNYEH60",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.b535_333_clear_traffic_statistics",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "4G Router Clear traffic statistics"
+        },
+        "last_changed": "2024-10-17T09:04:29.525016+00:00",
+        "last_reported": "2024-10-17T09:04:29.525016+00:00",
+        "last_updated": "2024-10-17T09:04:29.525016+00:00",
+        "context": {
+            "id": "01JACVHATNVTAY9WZW0TBX0MRM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.b535_333_restart",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "4G Router Restart"
+        },
+        "last_changed": "2024-10-17T09:04:29.525697+00:00",
+        "last_reported": "2024-10-17T09:04:29.525697+00:00",
+        "last_updated": "2024-10-17T09:04:29.525697+00:00",
+        "context": {
+            "id": "01JACVHATN1QPAYDNZ1SJMGKNR",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.dcs_4622",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.8.100",
+            "mac": "B0:C5:54:57:6C:83",
+            "host_name": "DCS-4622",
+            "interface_type": "Ethernet",
+            "associated_ssid": null,
+            "address_source": "DHCP",
+            "friendly_name": "DCS-4622"
+        },
+        "last_changed": "2024-10-17T09:04:41.414886+00:00",
+        "last_reported": "2024-10-17T09:05:01.109779+00:00",
+        "last_updated": "2024-10-17T09:04:41.414886+00:00",
+        "context": {
+            "id": "01JACVHPE6GH65WNX9RGJE0STJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.win_mc33j18hjb2",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.8.116",
+            "mac": "3C:EC:EF:96:77:C2",
+            "host_name": "WIN-MC33J18HJB2",
+            "interface_type": "Ethernet",
+            "associated_ssid": null,
+            "address_source": "DHCP",
+            "friendly_name": "WIN-MC33J18HJB2"
+        },
+        "last_changed": "2024-10-17T09:04:41.417417+00:00",
+        "last_reported": "2024-10-17T09:05:01.109858+00:00",
+        "last_updated": "2024-10-17T09:04:41.417417+00:00",
+        "context": {
+            "id": "01JACVHPE9RMXDMY03QTMPAFAX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "device_tracker.roborock_vacuum_a38",
+        "state": "home",
+        "attributes": {
+            "source_type": "router",
+            "ip": "192.168.8.127",
+            "mac": "B0:4A:39:8D:41:97",
+            "host_name": "roborock-vacuum-a38",
+            "associated_ssid": "SmartRoom",
+            "address_source": "DHCP",
+            "interface_type": "Wireless",
+            "friendly_name": "roborock-vacuum-a38"
+        },
+        "last_changed": "2025-01-20T02:51:41.079353+00:00",
+        "last_reported": "2025-01-20T02:51:51.201513+00:00",
+        "last_updated": "2025-01-20T02:51:41.079353+00:00",
+        "context": {
+            "id": "01JJ0SYZMQ9NQE1MB77S07Z49G",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "select.b535_333_preferred_network_mode",
+        "state": "00",
+        "attributes": {
+            "options": [
+                "00",
+                "0302",
+                "0301",
+                "03",
+                "0201",
+                "02",
+                "01"
+            ],
+            "friendly_name": "4G Router Preferred network mode"
+        },
+        "last_changed": "2024-10-17T09:04:29.531016+00:00",
+        "last_reported": "2024-10-17T09:05:01.110025+00:00",
+        "last_updated": "2024-10-17T09:04:29.531016+00:00",
+        "context": {
+            "id": "01JACVHATV8QQJTA70KTW4JG39",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_7",
+        "state": "unavailable",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.533524+00:00",
+        "last_reported": "2024-10-17T09:05:01.110082+00:00",
+        "last_updated": "2024-10-17T09:04:29.533524+00:00",
+        "context": {
+            "id": "01JACVHATXENG03CA3W1D58P6Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_primary_dns_server",
+        "state": "130.244.127.161",
+        "attributes": {
+            "icon": "mdi:ip",
+            "friendly_name": "4G Router Primary DNS server"
+        },
+        "last_changed": "2024-10-17T09:04:29.534112+00:00",
+        "last_reported": "2024-10-17T09:05:01.110139+00:00",
+        "last_updated": "2024-10-17T09:04:29.534112+00:00",
+        "context": {
+            "id": "01JACVHATYFR3DCEZMEA9SYE5X",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_secondary_dns_server",
+        "state": "130.244.127.169",
+        "attributes": {
+            "icon": "mdi:ip",
+            "friendly_name": "4G Router Secondary DNS server"
+        },
+        "last_changed": "2024-10-17T09:04:29.534378+00:00",
+        "last_reported": "2024-10-17T09:05:01.110178+00:00",
+        "last_updated": "2024-10-17T09:04:29.534378+00:00",
+        "context": {
+            "id": "01JACVHATYCXV8P961E8W3JCZC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_primary_ipv6_dns_server",
+        "state": "unavailable",
+        "attributes": {
+            "icon": "mdi:ip",
+            "friendly_name": "4G Router Primary IPv6 DNS server"
+        },
+        "last_changed": "2024-10-17T09:04:29.535046+00:00",
+        "last_reported": "2024-10-17T09:05:01.110212+00:00",
+        "last_updated": "2024-10-17T09:04:29.535046+00:00",
+        "context": {
+            "id": "01JACVHATZEZHK5A35KB65XTE1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_secondary_ipv6_dns_server",
+        "state": "unavailable",
+        "attributes": {
+            "icon": "mdi:ip",
+            "friendly_name": "4G Router Secondary IPv6 DNS server"
+        },
+        "last_changed": "2024-10-17T09:04:29.535267+00:00",
+        "last_reported": "2024-10-17T09:05:01.110257+00:00",
+        "last_updated": "2024-10-17T09:04:29.535267+00:00",
+        "context": {
+            "id": "01JACVHATZ1D75FFMD9PGMNER0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_wi_fi_clients_connected",
+        "state": "9",
+        "attributes": {
+            "state_class": "measurement",
+            "icon": "mdi:wifi",
+            "friendly_name": "4G Router Wi-Fi clients connected"
+        },
+        "last_changed": "2025-01-20T02:51:41.080152+00:00",
+        "last_reported": "2025-01-20T02:51:51.202522+00:00",
+        "last_updated": "2025-01-20T02:51:41.080152+00:00",
+        "context": {
+            "id": "01JJ0SYZMR74FCVHMSYDE5X6KH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_connection_duration",
+        "state": "867708",
+        "attributes": {
+            "unit_of_measurement": "s",
+            "device_class": "duration",
+            "icon": "mdi:timer-outline",
+            "friendly_name": "4G Router Current connection duration"
+        },
+        "last_changed": "2025-01-20T22:45:07.827694+00:00",
+        "last_reported": "2025-01-20T22:45:07.827694+00:00",
+        "last_updated": "2025-01-20T22:45:07.827694+00:00",
+        "context": {
+            "id": "01JJ2Y883KMNM9BKKDMSN55RDY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_connection_upload",
+        "state": "2454117670",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "B",
+            "device_class": "data_size",
+            "icon": "mdi:upload",
+            "friendly_name": "4G Router Current connection upload"
+        },
+        "last_changed": "2025-01-20T22:45:07.827821+00:00",
+        "last_reported": "2025-01-20T22:45:07.827821+00:00",
+        "last_updated": "2025-01-20T22:45:07.827821+00:00",
+        "context": {
+            "id": "01JJ2Y883KM8SBB9SF4DXY29FG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_connection_download",
+        "state": "9146227342",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "B",
+            "device_class": "data_size",
+            "icon": "mdi:download",
+            "friendly_name": "4G Router Current connection download"
+        },
+        "last_changed": "2025-01-20T22:45:07.827906+00:00",
+        "last_reported": "2025-01-20T22:45:07.827906+00:00",
+        "last_updated": "2025-01-20T22:45:07.827906+00:00",
+        "context": {
+            "id": "01JJ2Y883K10J54GZMA0BKNYYA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_download_rate",
+        "state": "2214",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "B/s",
+            "device_class": "data_rate",
+            "icon": "mdi:download",
+            "friendly_name": "4G Router Current download rate"
+        },
+        "last_changed": "2025-01-20T22:45:07.827987+00:00",
+        "last_reported": "2025-01-20T22:45:07.827987+00:00",
+        "last_updated": "2025-01-20T22:45:07.827987+00:00",
+        "context": {
+            "id": "01JJ2Y883KDPTS8CKXSTV4VMWY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_upload_rate",
+        "state": "2257",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "B/s",
+            "device_class": "data_rate",
+            "icon": "mdi:upload",
+            "friendly_name": "4G Router Current upload rate"
+        },
+        "last_changed": "2025-01-20T22:45:07.828063+00:00",
+        "last_reported": "2025-01-20T22:45:07.828063+00:00",
+        "last_updated": "2025-01-20T22:45:07.828063+00:00",
+        "context": {
+            "id": "01JJ2Y883M2CVHV39BKTAP58GS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_total_upload",
+        "state": "154931040343",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "B",
+            "device_class": "data_size",
+            "icon": "mdi:upload",
+            "friendly_name": "4G Router Total upload"
+        },
+        "last_changed": "2025-01-20T22:45:07.828142+00:00",
+        "last_reported": "2025-01-20T22:45:07.828142+00:00",
+        "last_updated": "2025-01-20T22:45:07.828142+00:00",
+        "context": {
+            "id": "01JJ2Y883MC78Q74DGTEPHP86E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_total_download",
+        "state": "674587026015",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "B",
+            "device_class": "data_size",
+            "icon": "mdi:download",
+            "friendly_name": "4G Router Total download"
+        },
+        "last_changed": "2025-01-20T22:45:07.828244+00:00",
+        "last_reported": "2025-01-20T22:45:07.828244+00:00",
+        "last_updated": "2025-01-20T22:45:07.828244+00:00",
+        "context": {
+            "id": "01JJ2Y883MVEKWCYMNXADS8BN8",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_total_connected_duration",
+        "state": "50231842",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "s",
+            "device_class": "duration",
+            "icon": "mdi:timer-outline",
+            "friendly_name": "4G Router Total connected duration"
+        },
+        "last_changed": "2025-01-20T22:45:07.828324+00:00",
+        "last_reported": "2025-01-20T22:45:07.828324+00:00",
+        "last_updated": "2025-01-20T22:45:07.828324+00:00",
+        "context": {
+            "id": "01JJ2Y883MTH1BZ3F32YNW3423",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_8",
+        "state": "1024738",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2025-01-16T16:07:23.065870+00:00",
+        "last_reported": "2025-01-16T16:07:32.788010+00:00",
+        "last_updated": "2025-01-16T16:07:23.065870+00:00",
+        "context": {
+            "id": "01JHQXX2NS8KK1HKYEV5JJGZ64",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_9",
+        "state": "11945218",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2025-01-19T01:22:12.388455+00:00",
+        "last_reported": "2025-01-19T01:22:22.176129+00:00",
+        "last_updated": "2025-01-19T01:22:12.388455+00:00",
+        "context": {
+            "id": "01JHY2EDS4ZV11GE9J8QMGDKA9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_wan_ip_address",
+        "state": "81.216.67.99",
+        "attributes": {
+            "icon": "mdi:ip",
+            "friendly_name": "4G Router WAN IP address"
+        },
+        "last_changed": "2024-10-17T09:04:29.541898+00:00",
+        "last_reported": "2024-10-17T09:05:01.111067+00:00",
+        "last_updated": "2024-10-17T09:04:29.541898+00:00",
+        "context": {
+            "id": "01JACVHAV5SWMGV0988WY4RWZJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_wan_ipv6_address",
+        "state": "unavailable",
+        "attributes": {
+            "icon": "mdi:ip",
+            "friendly_name": "4G Router WAN IPv6 address"
+        },
+        "last_changed": "2024-10-17T09:04:29.542098+00:00",
+        "last_reported": "2024-10-17T09:05:01.111099+00:00",
+        "last_updated": "2024-10-17T09:04:29.542098+00:00",
+        "context": {
+            "id": "01JACVHAV6RN290SXH7KR7F3C0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_uptime",
+        "state": "10275660",
+        "attributes": {
+            "unit_of_measurement": "s",
+            "device_class": "duration",
+            "icon": "mdi:timer-outline",
+            "friendly_name": "4G Router Uptime"
+        },
+        "last_changed": "2025-01-20T22:45:07.828615+00:00",
+        "last_reported": "2025-01-20T22:45:07.828615+00:00",
+        "last_updated": "2025-01-20T22:45:07.828615+00:00",
+        "context": {
+            "id": "01JJ2Y883M7J5S39SHYMB3QGYB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_operator_search_mode",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "4G Router Operator search mode"
+        },
+        "last_changed": "2024-10-17T09:04:29.543076+00:00",
+        "last_reported": "2024-10-17T09:05:01.111209+00:00",
+        "last_updated": "2024-10-17T09:04:29.543076+00:00",
+        "context": {
+            "id": "01JACVHAV7X4HHFCFFN1MS6YEB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_operator_name",
+        "state": "Tele2",
+        "attributes": {
+            "friendly_name": "4G Router Operator name"
+        },
+        "last_changed": "2024-10-17T09:04:29.543310+00:00",
+        "last_reported": "2024-10-17T09:05:01.111263+00:00",
+        "last_updated": "2024-10-17T09:04:29.543310+00:00",
+        "context": {
+            "id": "01JACVHAV720NJAENTRYW6MHXX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_operator_code",
+        "state": "24007",
+        "attributes": {
+            "friendly_name": "4G Router Operator code"
+        },
+        "last_changed": "2024-10-17T09:04:29.543991+00:00",
+        "last_reported": "2024-10-17T09:05:01.111299+00:00",
+        "last_updated": "2024-10-17T09:04:29.543991+00:00",
+        "context": {
+            "id": "01JACVHAV7H5KE2NXRDAPHC3HH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_preferred_network_mode",
+        "state": "00",
+        "attributes": {
+            "friendly_name": "4G Router Preferred network mode"
+        },
+        "last_changed": "2024-10-17T09:04:29.544211+00:00",
+        "last_reported": "2024-10-17T09:05:01.111332+00:00",
+        "last_updated": "2024-10-17T09:04:29.544211+00:00",
+        "context": {
+            "id": "01JACVHAV8PDKSMCT2EQCA6WQG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_month_download",
+        "state": "50.27187745",
+        "attributes": {
+            "state_class": "total",
+            "last_reset": "2024-12-01T03:19:51.828877",
+            "unit_of_measurement": "GB",
+            "device_class": "data_size",
+            "icon": "mdi:download",
+            "friendly_name": "4G Router Current month download"
+        },
+        "last_changed": "2025-01-20T22:45:07.828956+00:00",
+        "last_reported": "2025-01-20T22:45:07.828956+00:00",
+        "last_updated": "2025-01-20T22:45:07.828956+00:00",
+        "context": {
+            "id": "01JJ2Y883M0D338VVZCHZJ47J5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_month_upload",
+        "state": "9.59001985",
+        "attributes": {
+            "state_class": "total",
+            "last_reset": "2024-12-01T03:19:51.829019",
+            "unit_of_measurement": "GB",
+            "device_class": "data_size",
+            "icon": "mdi:upload",
+            "friendly_name": "4G Router Current month upload"
+        },
+        "last_changed": "2025-01-20T22:45:07.829075+00:00",
+        "last_reported": "2025-01-20T22:45:07.829075+00:00",
+        "last_updated": "2025-01-20T22:45:07.829075+00:00",
+        "context": {
+            "id": "01JJ2Y883NRB6HS0RKXJY18Q7V",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_current_day_transfer",
+        "state": "472653517",
+        "attributes": {
+            "state_class": "total",
+            "last_reset": "2025-01-20T00:00:53.829133",
+            "unit_of_measurement": "B",
+            "device_class": "data_size",
+            "icon": "mdi:arrow-up-down-bold",
+            "friendly_name": "4G Router Current day transfer"
+        },
+        "last_changed": "2025-01-20T22:45:07.829178+00:00",
+        "last_reported": "2025-01-20T22:45:07.829178+00:00",
+        "last_updated": "2025-01-20T22:45:07.829178+00:00",
+        "context": {
+            "id": "01JJ2Y883NET9YHYVFXFCDWQ1Q",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_unread_device",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-left",
+            "friendly_name": "4G Router SMS unread (device)"
+        },
+        "last_changed": "2024-10-17T09:04:29.545846+00:00",
+        "last_reported": "2024-10-17T09:05:01.111704+00:00",
+        "last_updated": "2024-10-17T09:04:29.545846+00:00",
+        "context": {
+            "id": "01JACVHAV9K8X4K72W4AMZX84C",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_inbox_device",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email",
+            "friendly_name": "4G Router SMS inbox (device)"
+        },
+        "last_changed": "2024-10-17T09:04:29.546396+00:00",
+        "last_reported": "2024-10-17T09:05:01.111740+00:00",
+        "last_updated": "2024-10-17T09:04:29.546396+00:00",
+        "context": {
+            "id": "01JACVHAVANSQ52PBDZ35CTWTB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_outbox_device",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-right",
+            "friendly_name": "4G Router SMS outbox (device)"
+        },
+        "last_changed": "2024-10-17T09:04:29.546628+00:00",
+        "last_reported": "2024-10-17T09:05:01.111774+00:00",
+        "last_updated": "2024-10-17T09:04:29.546628+00:00",
+        "context": {
+            "id": "01JACVHAVA42Y6YRPPBTJ28KKY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_drafts_device",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-right-outline",
+            "friendly_name": "4G Router SMS drafts (device)"
+        },
+        "last_changed": "2024-10-17T09:04:29.546823+00:00",
+        "last_reported": "2024-10-17T09:05:01.111808+00:00",
+        "last_updated": "2024-10-17T09:04:29.546823+00:00",
+        "context": {
+            "id": "01JACVHAVA38ZACDFBSK1K3Z2Q",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_deleted_device",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-minus",
+            "friendly_name": "4G Router SMS deleted (device)"
+        },
+        "last_changed": "2024-10-17T09:04:29.547011+00:00",
+        "last_reported": "2024-10-17T09:05:01.111839+00:00",
+        "last_updated": "2024-10-17T09:04:29.547011+00:00",
+        "context": {
+            "id": "01JACVHAVBQ8SS658A1EZ4TBCC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_unread_sim",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-left",
+            "friendly_name": "4G Router SMS unread (SIM)"
+        },
+        "last_changed": "2024-10-17T09:04:29.547194+00:00",
+        "last_reported": "2024-10-17T09:05:01.111871+00:00",
+        "last_updated": "2024-10-17T09:04:29.547194+00:00",
+        "context": {
+            "id": "01JACVHAVB4MJ68MZK54E7XB20",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_inbox_sim",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email",
+            "friendly_name": "4G Router SMS inbox (SIM)"
+        },
+        "last_changed": "2024-10-17T09:04:29.547767+00:00",
+        "last_reported": "2024-10-17T09:05:01.111901+00:00",
+        "last_updated": "2024-10-17T09:04:29.547767+00:00",
+        "context": {
+            "id": "01JACVHAVBJ8PC5NF9GBBQZHM5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_outbox_sim",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-right",
+            "friendly_name": "4G Router SMS outbox (SIM)"
+        },
+        "last_changed": "2024-10-17T09:04:29.548976+00:00",
+        "last_reported": "2024-10-17T09:05:01.111932+00:00",
+        "last_updated": "2024-10-17T09:04:29.548976+00:00",
+        "context": {
+            "id": "01JACVHAVCJXVCMPSN4W46TMME",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_drafts_sim",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-right-outline",
+            "friendly_name": "4G Router SMS drafts (SIM)"
+        },
+        "last_changed": "2024-10-17T09:04:29.549754+00:00",
+        "last_reported": "2024-10-17T09:05:01.111964+00:00",
+        "last_updated": "2024-10-17T09:04:29.549754+00:00",
+        "context": {
+            "id": "01JACVHAVD4PHR95BA9NDG9JVX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_capacity_device",
+        "state": "500",
+        "attributes": {
+            "icon": "mdi:email",
+            "friendly_name": "4G Router SMS capacity (device)"
+        },
+        "last_changed": "2024-10-17T09:04:29.550003+00:00",
+        "last_reported": "2024-10-17T09:05:01.111997+00:00",
+        "last_updated": "2024-10-17T09:04:29.550003+00:00",
+        "context": {
+            "id": "01JACVHAVED1941MHC6M2GVK95",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_capacity_sim",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email",
+            "friendly_name": "4G Router SMS capacity (SIM)"
+        },
+        "last_changed": "2024-10-17T09:04:29.550247+00:00",
+        "last_reported": "2024-10-17T09:05:01.112030+00:00",
+        "last_updated": "2024-10-17T09:04:29.550247+00:00",
+        "context": {
+            "id": "01JACVHAVEAKXDJRX7VD11D6NS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_messages_sim",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-left",
+            "friendly_name": "4G Router SMS messages (SIM)"
+        },
+        "last_changed": "2024-10-17T09:04:29.550447+00:00",
+        "last_reported": "2024-10-17T09:05:01.112061+00:00",
+        "last_updated": "2024-10-17T09:04:29.550447+00:00",
+        "context": {
+            "id": "01JACVHAVEQQP7NQSY21D2G7A8",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_11",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.550619+00:00",
+        "last_reported": "2024-10-17T09:05:01.112092+00:00",
+        "last_updated": "2024-10-17T09:04:29.550619+00:00",
+        "context": {
+            "id": "01JACVHAVE3ENQW67X0TD4Q1TY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sms_unread",
+        "state": "0",
+        "attributes": {
+            "icon": "mdi:email-arrow-left",
+            "friendly_name": "4G Router SMS unread"
+        },
+        "last_changed": "2024-10-17T09:04:29.550807+00:00",
+        "last_reported": "2024-10-17T09:05:01.112123+00:00",
+        "last_updated": "2024-10-17T09:04:29.550807+00:00",
+        "context": {
+            "id": "01JACVHAVEVYTSXGPYRZX677C2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_10",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.551016+00:00",
+        "last_reported": "2024-10-17T09:05:01.112154+00:00",
+        "last_updated": "2024-10-17T09:04:29.551016+00:00",
+        "context": {
+            "id": "01JACVHAVFM8045GWSNH1218H6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_pci",
+        "state": "150",
+        "attributes": {
+            "icon": "mdi:transmission-tower",
+            "friendly_name": "4G Router PCI"
+        },
+        "last_changed": "2025-01-20T13:59:35.002538+00:00",
+        "last_reported": "2025-01-20T13:59:54.990647+00:00",
+        "last_updated": "2025-01-20T13:59:35.002538+00:00",
+        "context": {
+            "id": "01JJ205YATNQVV25QNATPVY5Z2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.551988+00:00",
+        "last_reported": "2024-10-17T09:05:01.112233+00:00",
+        "last_updated": "2024-10-17T09:04:29.551988+00:00",
+        "context": {
+            "id": "01JACVHAVF7KGSX3RY5T84MT4Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_cell_id",
+        "state": "85795695",
+        "attributes": {
+            "icon": "mdi:transmission-tower",
+            "friendly_name": "4G Router Cell ID"
+        },
+        "last_changed": "2025-01-20T13:59:35.002836+00:00",
+        "last_reported": "2025-01-20T13:59:54.990798+00:00",
+        "last_updated": "2025-01-20T13:59:35.002836+00:00",
+        "context": {
+            "id": "01JJ205YATXH9DGJ2EX9VY04E9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_rsrq",
+        "state": "-18.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "dB",
+            "device_class": "signal_strength",
+            "icon": "mdi:signal-cellular-outline",
+            "friendly_name": "4G Router RSRQ"
+        },
+        "last_changed": "2025-01-20T22:45:07.830168+00:00",
+        "last_reported": "2025-01-20T22:45:07.830168+00:00",
+        "last_updated": "2025-01-20T22:45:07.830168+00:00",
+        "context": {
+            "id": "01JJ2Y883P84YJ6XHVS5P09K1Q",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_rsrp",
+        "state": "-80.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "dBm",
+            "device_class": "signal_strength",
+            "icon": "mdi:signal-cellular-3",
+            "friendly_name": "4G Router RSRP"
+        },
+        "last_changed": "2025-01-20T20:59:27.548410+00:00",
+        "last_reported": "2025-01-20T20:59:37.299436+00:00",
+        "last_updated": "2025-01-20T20:59:27.548410+00:00",
+        "context": {
+            "id": "01JJ2R6RDW5HY5ZJDWYPE3HB5A",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_rssi",
+        "state": "-39.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "dBm",
+            "device_class": "signal_strength",
+            "icon": "mdi:signal-cellular-3",
+            "friendly_name": "4G Router RSSI"
+        },
+        "last_changed": "2025-01-20T22:45:07.830360+00:00",
+        "last_reported": "2025-01-20T22:45:07.830360+00:00",
+        "last_updated": "2025-01-20T22:45:07.830360+00:00",
+        "context": {
+            "id": "01JJ2Y883PNW523MV0CHZMMK3E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_sinr",
+        "state": "2.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "dB",
+            "device_class": "signal_strength",
+            "icon": "mdi:signal-cellular-1",
+            "friendly_name": "4G Router SINR"
+        },
+        "last_changed": "2025-01-20T22:45:07.830450+00:00",
+        "last_reported": "2025-01-20T22:45:07.830450+00:00",
+        "last_updated": "2025-01-20T22:45:07.830450+00:00",
+        "context": {
+            "id": "01JJ2Y883PNK0WQPC06WYWH1WG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_rscp",
+        "state": "unavailable",
+        "attributes": {
+            "state_class": "measurement",
+            "device_class": "signal_strength",
+            "icon": "mdi:signal-cellular-outline",
+            "friendly_name": "4G Router RSCP"
+        },
+        "last_changed": "2024-10-17T09:04:29.555037+00:00",
+        "last_reported": "2024-10-17T09:05:01.112532+00:00",
+        "last_updated": "2024-10-17T09:04:29.555037+00:00",
+        "context": {
+            "id": "01JACVHAVKEJNCG0D8QD0VTSGB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_ec_io",
+        "state": "unavailable",
+        "attributes": {
+            "state_class": "measurement",
+            "device_class": "signal_strength",
+            "icon": "mdi:signal-cellular-outline",
+            "friendly_name": "4G Router EC/IO"
+        },
+        "last_changed": "2024-10-17T09:04:29.555387+00:00",
+        "last_reported": "2024-10-17T09:05:01.112568+00:00",
+        "last_updated": "2024-10-17T09:04:29.555387+00:00",
+        "context": {
+            "id": "01JACVHAVKQPXXYZZ4V659B6RS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_2",
+        "state": "4G",
+        "attributes": {
+            "icon": "mdi:signal-4g",
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.555622+00:00",
+        "last_reported": "2024-10-17T09:05:01.112606+00:00",
+        "last_updated": "2024-10-17T09:04:29.555622+00:00",
+        "context": {
+            "id": "01JACVHAVKG5D9WHRQ3S2ACSCK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_uplink_bandwidth",
+        "state": "20.0",
+        "attributes": {
+            "unit_of_measurement": "MHz",
+            "icon": "mdi:speedometer",
+            "friendly_name": "4G Router Uplink bandwidth"
+        },
+        "last_changed": "2025-01-20T13:59:35.004270+00:00",
+        "last_reported": "2025-01-20T13:59:54.991731+00:00",
+        "last_updated": "2025-01-20T13:59:35.004270+00:00",
+        "context": {
+            "id": "01JJ205YAW716Z7V2GS2VGQTZE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_downlink_bandwidth",
+        "state": "20.0",
+        "attributes": {
+            "unit_of_measurement": "MHz",
+            "icon": "mdi:speedometer",
+            "friendly_name": "4G Router Downlink bandwidth"
+        },
+        "last_changed": "2025-01-20T13:59:35.004452+00:00",
+        "last_reported": "2025-01-20T13:59:54.991835+00:00",
+        "last_updated": "2025-01-20T13:59:35.004452+00:00",
+        "context": {
+            "id": "01JJ205YAW6PS8Y4K8ZHPPSNZF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_transmit_power",
+        "state": "PPusch:-3dBm PPucch:-21dBm PSrs:-40dBm PPrach:-20dBm",
+        "attributes": {
+            "friendly_name": "4G Router Transmit power"
+        },
+        "last_changed": "2025-01-20T22:45:07.830834+00:00",
+        "last_reported": "2025-01-20T22:45:07.830834+00:00",
+        "last_updated": "2025-01-20T22:45:07.830834+00:00",
+        "context": {
+            "id": "01JJ2Y883PD2SCVZ79QSMESK07",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_tdd",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router TDD"
+        },
+        "last_changed": "2024-10-17T09:04:29.557620+00:00",
+        "last_reported": "2024-10-17T09:05:01.112807+00:00",
+        "last_updated": "2024-10-17T09:04:29.557620+00:00",
+        "context": {
+            "id": "01JACVHAVN19XJPYH62YQ0C1VY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_uplink_mcs",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router Uplink MCS"
+        },
+        "last_changed": "2024-10-17T09:04:29.557799+00:00",
+        "last_reported": "2024-10-17T09:05:01.112835+00:00",
+        "last_updated": "2024-10-17T09:04:29.557799+00:00",
+        "context": {
+            "id": "01JACVHAVNCJ2D86B3N21EE5QJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_downlink_mcs",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router Downlink MCS"
+        },
+        "last_changed": "2024-10-17T09:04:29.557984+00:00",
+        "last_reported": "2024-10-17T09:05:01.112862+00:00",
+        "last_updated": "2024-10-17T09:04:29.557984+00:00",
+        "context": {
+            "id": "01JACVHAVN28SBZN6193176MM5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_earfcn",
+        "state": "DL:3350 UL:21350",
+        "attributes": {
+            "friendly_name": "4G Router EARFCN"
+        },
+        "last_changed": "2025-01-20T13:59:35.005061+00:00",
+        "last_reported": "2025-01-20T13:59:54.992318+00:00",
+        "last_updated": "2025-01-20T13:59:35.005061+00:00",
+        "context": {
+            "id": "01JJ205YAXS3WZXK23N8KEQV4X",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_rrc_status",
+        "state": "1",
+        "attributes": {
+            "friendly_name": "4G Router RRC status"
+        },
+        "last_changed": "2024-11-15T04:27:27.988537+00:00",
+        "last_reported": "2024-11-15T04:27:27.988537+00:00",
+        "last_updated": "2024-11-15T04:27:27.988537+00:00",
+        "context": {
+            "id": "01JCQ16XVMDPDNP4690MC7TGDS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_rac",
+        "state": "unavailable",
+        "attributes": {
+            "icon": "mdi:map-marker",
+            "friendly_name": "4G Router RAC"
+        },
+        "last_changed": "2024-10-17T09:04:29.559914+00:00",
+        "last_reported": "2024-10-17T09:05:01.112958+00:00",
+        "last_updated": "2024-10-17T09:04:29.559914+00:00",
+        "context": {
+            "id": "01JACVHAVQEN2GDPVHV55R0X4P",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_lac",
+        "state": "unavailable",
+        "attributes": {
+            "icon": "mdi:map-marker",
+            "friendly_name": "4G Router LAC"
+        },
+        "last_changed": "2024-10-17T09:04:29.560105+00:00",
+        "last_reported": "2024-10-17T09:05:01.112982+00:00",
+        "last_updated": "2024-10-17T09:04:29.560105+00:00",
+        "context": {
+            "id": "01JACVHAVRSJJP7KQ4VGKZDSVG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_tac",
+        "state": "34503",
+        "attributes": {
+            "icon": "mdi:map-marker",
+            "friendly_name": "4G Router TAC"
+        },
+        "last_changed": "2024-10-17T09:04:29.560844+00:00",
+        "last_reported": "2024-10-17T09:05:01.113013+00:00",
+        "last_updated": "2024-10-17T09:04:29.560844+00:00",
+        "context": {
+            "id": "01JACVHAVR0Z0FDT4X53J5K76N",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_band",
+        "state": "7",
+        "attributes": {
+            "friendly_name": "4G Router Band"
+        },
+        "last_changed": "2025-01-20T13:59:35.005594+00:00",
+        "last_reported": "2025-01-20T13:59:54.992682+00:00",
+        "last_updated": "2025-01-20T13:59:35.005594+00:00",
+        "context": {
+            "id": "01JJ205YAXK7KD8DYVD4W5WSER",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_3",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2025-01-20T22:43:17.566032+00:00",
+        "last_reported": "2025-01-20T22:43:27.511195+00:00",
+        "last_updated": "2025-01-20T22:43:17.566032+00:00",
+        "context": {
+            "id": "01JJ2Y4WDYPRTMPHAZAKBJ3MV0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_plmn",
+        "state": "24007",
+        "attributes": {
+            "friendly_name": "4G Router PLMN"
+        },
+        "last_changed": "2024-10-17T09:04:29.562016+00:00",
+        "last_reported": "2024-10-17T09:05:01.113098+00:00",
+        "last_updated": "2024-10-17T09:04:29.562016+00:00",
+        "context": {
+            "id": "01JACVHAVTCSVNX7SCXZ7D5CDP",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_4",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.562210+00:00",
+        "last_reported": "2024-10-17T09:05:01.113128+00:00",
+        "last_updated": "2024-10-17T09:04:29.562210+00:00",
+        "context": {
+            "id": "01JACVHAVTE12ATDNDRCBB244B",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_5",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.562967+00:00",
+        "last_reported": "2024-10-17T09:05:01.113154+00:00",
+        "last_updated": "2024-10-17T09:04:29.562967+00:00",
+        "context": {
+            "id": "01JACVHAVTE7SB5B31KW60X164",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_lte_uplink_frequency",
+        "state": "2560.0",
+        "attributes": {
+            "unit_of_measurement": "MHz",
+            "device_class": "frequency",
+            "friendly_name": "4G Router LTE uplink frequency"
+        },
+        "last_changed": "2025-01-20T13:59:35.006190+00:00",
+        "last_reported": "2025-01-20T13:59:54.993118+00:00",
+        "last_updated": "2025-01-20T13:59:35.006190+00:00",
+        "context": {
+            "id": "01JJ205YAYE4BFE32VKQ5798K0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_lte_downlink_frequency",
+        "state": "2680.0",
+        "attributes": {
+            "unit_of_measurement": "MHz",
+            "device_class": "frequency",
+            "friendly_name": "4G Router LTE downlink frequency"
+        },
+        "last_changed": "2025-01-20T13:59:35.006374+00:00",
+        "last_reported": "2025-01-20T13:59:54.993205+00:00",
+        "last_updated": "2025-01-20T13:59:35.006374+00:00",
+        "context": {
+            "id": "01JJ205YAYJ2JKHBKNYEYKBGE4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_transmission_mode",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router Transmission mode"
+        },
+        "last_changed": "2024-10-17T09:04:29.564211+00:00",
+        "last_reported": "2024-10-17T09:05:01.113267+00:00",
+        "last_updated": "2024-10-17T09:04:29.564211+00:00",
+        "context": {
+            "id": "01JACVHAVWA36PK8JNS6HENDXQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_enodeb_id",
+        "state": "0335139",
+        "attributes": {
+            "friendly_name": "4G Router eNodeB ID"
+        },
+        "last_changed": "2025-01-10T21:42:26.858744+00:00",
+        "last_reported": "2025-01-10T21:42:26.858744+00:00",
+        "last_updated": "2025-01-10T21:42:26.858744+00:00",
+        "context": {
+            "id": "01JH92P99A88VCYNV534RT8BF1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_cqi_0",
+        "state": "unavailable",
+        "attributes": {
+            "icon": "mdi:speedometer",
+            "friendly_name": "4G Router CQI 0"
+        },
+        "last_changed": "2024-10-17T09:04:29.564635+00:00",
+        "last_reported": "2024-10-17T09:05:01.113326+00:00",
+        "last_updated": "2024-10-17T09:04:29.564635+00:00",
+        "context": {
+            "id": "01JACVHAVWEEV1XKN681ESSQVE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_cqi_1",
+        "state": "unavailable",
+        "attributes": {
+            "icon": "mdi:speedometer",
+            "friendly_name": "4G Router CQI 1"
+        },
+        "last_changed": "2024-10-17T09:04:29.564808+00:00",
+        "last_reported": "2024-10-17T09:05:01.113350+00:00",
+        "last_updated": "2024-10-17T09:04:29.564808+00:00",
+        "context": {
+            "id": "01JACVHAVWX9ZPT436JRBH6HXQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_uplink_frequency",
+        "state": "2560000.0",
+        "attributes": {
+            "unit_of_measurement": "kHz",
+            "device_class": "frequency",
+            "friendly_name": "4G Router Uplink frequency"
+        },
+        "last_changed": "2025-01-20T13:59:35.006891+00:00",
+        "last_reported": "2025-01-20T13:59:54.996892+00:00",
+        "last_updated": "2025-01-20T13:59:35.006891+00:00",
+        "context": {
+            "id": "01JJ205YAYZ728NWQWQTFZ27RK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_downlink_frequency",
+        "state": "2680000.0",
+        "attributes": {
+            "unit_of_measurement": "kHz",
+            "device_class": "frequency",
+            "friendly_name": "4G Router Downlink frequency"
+        },
+        "last_changed": "2025-01-20T13:59:35.007051+00:00",
+        "last_reported": "2025-01-20T13:59:54.997031+00:00",
+        "last_updated": "2025-01-20T13:59:35.007051+00:00",
+        "context": {
+            "id": "01JJ205YAZTXTK4E4DQ4XSMVZT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_arfcn",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router ARFCN"
+        },
+        "last_changed": "2024-10-17T09:04:29.566034+00:00",
+        "last_reported": "2024-10-17T09:05:01.113452+00:00",
+        "last_updated": "2024-10-17T09:04:29.566034+00:00",
+        "context": {
+            "id": "01JACVHAVYPX68QM19Q8WAA12M",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_base_station_identity_code",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router Base station identity code"
+        },
+        "last_changed": "2024-10-17T09:04:29.567092+00:00",
+        "last_reported": "2024-10-17T09:05:01.113477+00:00",
+        "last_updated": "2024-10-17T09:04:29.567092+00:00",
+        "context": {
+            "id": "01JACVHAVZD0QE7EBN1Y2JK7A9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.b535_333_6",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "4G Router "
+        },
+        "last_changed": "2024-10-17T09:04:29.567353+00:00",
+        "last_reported": "2024-10-17T09:05:01.113502+00:00",
+        "last_updated": "2024-10-17T09:04:29.567353+00:00",
+        "context": {
+            "id": "01JACVHAVZXR6B1GQWKQEQ78DZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.b535_333_mobile_data",
+        "state": "on",
+        "attributes": {
+            "device_class": "switch",
+            "friendly_name": "4G Router Mobile data"
+        },
+        "last_changed": "2024-10-17T09:04:29.568007+00:00",
+        "last_reported": "2024-10-17T09:05:01.113542+00:00",
+        "last_updated": "2024-10-17T09:04:29.568007+00:00",
+        "context": {
+            "id": "01JACVHAW0TKM9YBZD2YS781TY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.b535_333_wi_fi_guest_network",
+        "state": "off",
+        "attributes": {
+            "ssid": "B535_0FCA_Guest",
+            "device_class": "switch",
+            "friendly_name": "4G Router Wi-Fi guest network"
+        },
+        "last_changed": "2024-10-17T09:04:29.568701+00:00",
+        "last_reported": "2024-10-17T09:05:01.113581+00:00",
+        "last_updated": "2024-10-17T09:04:29.568701+00:00",
+        "context": {
+            "id": "01JACVHAW0WNSPAB2BWW7XJ9Y4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.fisheye_d_link_dcs_4622_reboot",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Fisheye D-Link DCS-4622 Reboot"
+        },
+        "last_changed": "2024-10-17T09:04:30.747958+00:00",
+        "last_reported": "2024-10-17T09:04:30.747958+00:00",
+        "last_updated": "2024-10-17T09:04:30.747958+00:00",
+        "context": {
+            "id": "01JACVHC0VPCPE628S6JBDDW0T",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.fisheye_d_link_dcs_4622_set_system_date_and_time",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Fisheye D-Link DCS-4622 Set System Date and Time"
+        },
+        "last_changed": "2024-10-17T09:04:30.748194+00:00",
+        "last_reported": "2024-10-17T09:04:30.748194+00:00",
+        "last_updated": "2024-10-17T09:04:30.748194+00:00",
+        "context": {
+            "id": "01JACVHC0WHQ270QX5KDT7CFWX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "camera.fisheye_d_link_dcs_4622_profile1",
+        "state": "idle",
+        "attributes": {
+            "access_token": "c16a149a04bba26deae27e3cb48cda2d3ade68d60cc36cafb16899734abd7a66",
+            "frontend_stream_type": "hls",
+            "entity_picture": "/api/camera_proxy/camera.fisheye_d_link_dcs_4622_profile1?token=c16a149a04bba26deae27e3cb48cda2d3ade68d60cc36cafb16899734abd7a66",
+            "friendly_name": "Fisheye D-Link DCS-4622 profile1",
+            "supported_features": 2
+        },
+        "last_changed": "2024-10-17T09:04:30.749363+00:00",
+        "last_reported": "2025-01-20T22:44:50.695831+00:00",
+        "last_updated": "2025-01-20T22:44:50.695831+00:00",
+        "context": {
+            "id": "01JJ2Y7QC78Q2XW2JSS6K6P03P",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.fisheye_d_link_dcs_4622_motion_alarm",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion",
+            "friendly_name": "Fisheye D-Link DCS-4622 Motion Alarm"
+        },
+        "last_changed": "2024-10-17T09:04:30.749998+00:00",
+        "last_reported": "2024-10-17T09:04:30.749998+00:00",
+        "last_updated": "2024-10-17T09:04:30.749998+00:00",
+        "context": {
+            "id": "01JACVHC0X6D52FR15ZEF6VDD9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.fisheye_d_link_dcs_4622_autofocus",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Fisheye D-Link DCS-4622 Autofocus"
+        },
+        "last_changed": "2024-10-17T09:04:30.750520+00:00",
+        "last_reported": "2024-10-17T09:05:00.751150+00:00",
+        "last_updated": "2024-10-17T09:04:30.750520+00:00",
+        "context": {
+            "id": "01JACVHC0YTZ1X0QN5R71PA0YB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.fisheye_d_link_dcs_4622_ir_lamp",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Fisheye D-Link DCS-4622 IR lamp"
+        },
+        "last_changed": "2024-10-17T09:04:30.750702+00:00",
+        "last_reported": "2024-10-17T09:05:00.751201+00:00",
+        "last_updated": "2024-10-17T09:04:30.750702+00:00",
+        "context": {
+            "id": "01JACVHC0Y0NRN93F72KV1QEAX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.fisheye_d_link_dcs_4622_wiper",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Fisheye D-Link DCS-4622 Wiper"
+        },
+        "last_changed": "2024-10-17T09:04:30.750859+00:00",
+        "last_reported": "2024-10-17T09:05:00.751237+00:00",
+        "last_updated": "2024-10-17T09:04:30.750859+00:00",
+        "context": {
+            "id": "01JACVHC0YRC1Y26M11P7AZSR1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "automation.warning_if_db_exceeds_10gb",
+        "state": "on",
+        "attributes": {
+            "id": "1729158524548",
+            "last_triggered": "2024-10-17T12:09:49.857721+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "Warning if DB exceeds 10GB"
+        },
+        "last_changed": "2024-10-17T12:10:41.084622+00:00",
+        "last_reported": "2024-10-17T12:10:41.084622+00:00",
+        "last_updated": "2024-10-17T12:10:41.084622+00:00",
+        "context": {
+            "id": "01JAD668HWSAR586SWSQZ4Q10E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.z_stick_gen5_usb_controller_status",
+        "state": "ready",
+        "attributes": {
+            "friendly_name": "Z\u2010Stick Gen5 USB Controller Status"
+        },
+        "last_changed": "2024-10-18T13:25:47.827549+00:00",
+        "last_reported": "2024-10-18T13:25:47.827549+00:00",
+        "last_updated": "2024-10-18T13:25:47.827549+00:00",
+        "context": {
+            "id": "01JAFWWGNKNG14YHRHHTC8Y7HF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_4_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Node 4 Node status"
+        },
+        "last_changed": "2024-10-18T13:25:47.831091+00:00",
+        "last_reported": "2024-10-18T13:25:47.831207+00:00",
+        "last_updated": "2024-10-18T13:25:47.831091+00:00",
+        "context": {
+            "id": "01JAFWWGNQD5R14E3AR9Q2WEQB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_5_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Node 5 Node status"
+        },
+        "last_changed": "2024-10-18T13:25:47.833034+00:00",
+        "last_reported": "2024-10-18T13:25:47.833097+00:00",
+        "last_updated": "2024-10-18T13:25:47.833034+00:00",
+        "context": {
+            "id": "01JAFWWGNSV2YY9RTXYX94K0XN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_6_node_status",
+        "state": "dead",
+        "attributes": {
+            "friendly_name": "Node 6 Node status"
+        },
+        "last_changed": "2024-10-18T13:25:54.057944+00:00",
+        "last_reported": "2024-10-18T13:25:54.057944+00:00",
+        "last_updated": "2024-10-18T13:25:54.057944+00:00",
+        "context": {
+            "id": "01JAFWWPR91NQP529CDRDVCJVE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_10_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Motion Sensor Node status"
+        },
+        "last_changed": "2025-01-20T21:19:35.787810+00:00",
+        "last_reported": "2025-01-20T21:19:35.787810+00:00",
+        "last_updated": "2025-01-20T21:19:35.787810+00:00",
+        "context": {
+            "id": "01JJ2SBMBB4AX72D2XCH72B9QK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_11_node_status",
+        "state": "dead",
+        "attributes": {
+            "friendly_name": "Node 11 Node status"
+        },
+        "last_changed": "2024-10-18T13:26:00.111364+00:00",
+        "last_reported": "2024-10-18T13:26:00.111364+00:00",
+        "last_updated": "2024-10-18T13:26:00.111364+00:00",
+        "context": {
+            "id": "01JAFWWWNF181P0DGMAYBE3STS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_12_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Node 12 Node status"
+        },
+        "last_changed": "2024-10-18T13:25:47.846045+00:00",
+        "last_reported": "2024-10-18T13:25:47.846106+00:00",
+        "last_updated": "2024-10-18T13:25:47.846045+00:00",
+        "context": {
+            "id": "01JAFWWGP65ADQE0WS0Y5DF9M0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_13_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Node 13 Node status"
+        },
+        "last_changed": "2024-10-18T13:25:47.847609+00:00",
+        "last_reported": "2024-10-18T13:25:47.847671+00:00",
+        "last_updated": "2024-10-18T13:25:47.847609+00:00",
+        "context": {
+            "id": "01JAFWWGP77X7FXNVNCY493D41",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_14_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Node 14 Node status"
+        },
+        "last_changed": "2024-10-18T13:25:47.850542+00:00",
+        "last_reported": "2024-10-18T13:25:47.850607+00:00",
+        "last_updated": "2024-10-18T13:25:47.850542+00:00",
+        "context": {
+            "id": "01JAFWWGPA8E7EGZ4F07Q7QW3Z",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_15_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Node status"
+        },
+        "last_changed": "2025-01-20T21:54:29.351571+00:00",
+        "last_reported": "2025-01-20T21:54:29.351571+00:00",
+        "last_updated": "2025-01-20T21:54:29.351571+00:00",
+        "context": {
+            "id": "01JJ2VBGV72HPD25AVJ2W5VQQH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_motion_sensor_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Node status"
+        },
+        "last_changed": "2025-01-20T22:21:46.214257+00:00",
+        "last_reported": "2025-01-20T22:21:46.214257+00:00",
+        "last_updated": "2025-01-20T22:21:46.214257+00:00",
+        "context": {
+            "id": "01JJ2WXFB6CSC7X83SNQT10BGH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_motion_sensor_node_status_2",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Node status"
+        },
+        "last_changed": "2025-01-20T20:19:22.052803+00:00",
+        "last_reported": "2025-01-20T20:19:22.052803+00:00",
+        "last_updated": "2025-01-20T20:19:22.052803+00:00",
+        "context": {
+            "id": "01JJ2NXBA4R18SKFK0ZT0C4EJY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_18_node_status",
+        "state": "asleep",
+        "attributes": {
+            "friendly_name": "Smart Door Sensor Node status"
+        },
+        "last_changed": "2025-01-20T20:12:23.615063+00:00",
+        "last_reported": "2025-01-20T20:12:23.615063+00:00",
+        "last_updated": "2025-01-20T20:12:23.615063+00:00",
+        "context": {
+            "id": "01JJ2NGJNZN17DCRBR3TDABVCG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_19_node_status",
+        "state": "dead",
+        "attributes": {
+            "friendly_name": "Node 19 Node status"
+        },
+        "last_changed": "2024-10-18T13:26:04.939487+00:00",
+        "last_reported": "2024-10-18T13:26:04.939487+00:00",
+        "last_updated": "2024-10-18T13:26:04.939487+00:00",
+        "context": {
+            "id": "01JAFWX1CBH2EV9QKY2S83PBEJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_metering_plug_node_status_2",
+        "state": "dead",
+        "attributes": {
+            "friendly_name": "Smart Metering Plug Node status"
+        },
+        "last_changed": "2024-10-27T23:33:56.691595+00:00",
+        "last_reported": "2024-10-27T23:33:56.691595+00:00",
+        "last_updated": "2024-10-27T23:33:56.691595+00:00",
+        "context": {
+            "id": "01JB858HAK9TH37EPCC6NF49J1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_22_node_status",
+        "state": "dead",
+        "attributes": {
+            "friendly_name": "Node 22 Node status"
+        },
+        "last_changed": "2024-10-18T13:26:13.305929+00:00",
+        "last_reported": "2024-10-18T13:26:13.305929+00:00",
+        "last_updated": "2024-10-18T13:26:13.305929+00:00",
+        "context": {
+            "id": "01JAFWX9HSWWCRS3V2QH71BT58",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_23_node_status",
+        "state": "dead",
+        "attributes": {
+            "friendly_name": "Node 23 Node status"
+        },
+        "last_changed": "2024-10-18T13:26:31.402547+00:00",
+        "last_reported": "2024-10-18T13:26:31.402547+00:00",
+        "last_updated": "2024-10-18T13:26:31.402547+00:00",
+        "context": {
+            "id": "01JAFWXV7AANF2YDA1101KSCES",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_24_node_status",
+        "state": "dead",
+        "attributes": {
+            "friendly_name": "Node 24 Node status"
+        },
+        "last_changed": "2024-10-18T13:26:37.497738+00:00",
+        "last_reported": "2024-10-18T13:26:37.497738+00:00",
+        "last_updated": "2024-10-18T13:26:37.497738+00:00",
+        "context": {
+            "id": "01JAFWY15SY8TX2VEKE43YASA3",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_4_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 4 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.831697+00:00",
+        "last_reported": "2024-10-18T13:25:47.831697+00:00",
+        "last_updated": "2024-10-18T13:25:47.831697+00:00",
+        "context": {
+            "id": "01JAFWWGNQ97WMRMA20SD11MHH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_4_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 4 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:47.832672+00:00",
+        "last_reported": "2024-10-18T13:25:47.832672+00:00",
+        "last_updated": "2024-10-18T13:25:47.832672+00:00",
+        "context": {
+            "id": "01JAFWWGNRPGC5F650JYJSHVP8",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_5_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 5 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.833926+00:00",
+        "last_reported": "2024-10-18T13:25:47.833926+00:00",
+        "last_updated": "2024-10-18T13:25:47.833926+00:00",
+        "context": {
+            "id": "01JAFWWGNSZ4KM262HKJA462MD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_5_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 5 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:47.835029+00:00",
+        "last_reported": "2024-10-18T13:25:47.835029+00:00",
+        "last_updated": "2024-10-18T13:25:47.835029+00:00",
+        "context": {
+            "id": "01JAFWWGNV1NY2FWPZ3MND5NNV",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_6_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 6 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.835768+00:00",
+        "last_reported": "2024-10-18T13:25:47.835768+00:00",
+        "last_updated": "2024-10-18T13:25:47.835768+00:00",
+        "context": {
+            "id": "01JAFWWGNV2T8D2S32ZDPXXDGP",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_6_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 6 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:47.837477+00:00",
+        "last_reported": "2024-10-18T13:25:47.837477+00:00",
+        "last_updated": "2024-10-18T13:25:47.837477+00:00",
+        "context": {
+            "id": "01JAFWWGNXSN7TEYAAABF7S0WB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_10_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Motion Sensor Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.843003+00:00",
+        "last_reported": "2024-10-18T14:19:16.652801+00:00",
+        "last_updated": "2024-10-18T14:19:16.652801+00:00",
+        "context": {
+            "id": "01JAFZYE9CWYD3XCM64F3MNQES",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_10_last_seen",
+        "state": "2025-01-20T22:11:43+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Motion Sensor Last seen"
+        },
+        "last_changed": "2025-01-20T22:11:43.140010+00:00",
+        "last_reported": "2025-01-20T22:11:43.392686+00:00",
+        "last_updated": "2025-01-20T22:11:43.140010+00:00",
+        "context": {
+            "id": "01JJ2WB2D4H4B6V5ZH905NZNV8",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_11_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 11 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.844893+00:00",
+        "last_reported": "2024-10-18T13:25:47.844893+00:00",
+        "last_updated": "2024-10-18T13:25:47.844893+00:00",
+        "context": {
+            "id": "01JAFWWGP4RR151GSXRFNQD1QD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_11_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 11 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:47.845714+00:00",
+        "last_reported": "2024-10-18T13:25:47.845714+00:00",
+        "last_updated": "2024-10-18T13:25:47.845714+00:00",
+        "context": {
+            "id": "01JAFWWGP55W655GZEB1GR508X",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_12_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 12 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.846311+00:00",
+        "last_reported": "2024-10-18T13:25:47.846311+00:00",
+        "last_updated": "2024-10-18T13:25:47.846311+00:00",
+        "context": {
+            "id": "01JAFWWGP607X1T4YBKEBCYS6V",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_12_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 12 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:47.847246+00:00",
+        "last_reported": "2024-10-18T13:25:47.847246+00:00",
+        "last_updated": "2024-10-18T13:25:47.847246+00:00",
+        "context": {
+            "id": "01JAFWWGP7RR3FNAZ6KE8FCJ3H",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_13_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 13 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.847864+00:00",
+        "last_reported": "2024-10-18T13:25:47.847864+00:00",
+        "last_updated": "2024-10-18T13:25:47.847864+00:00",
+        "context": {
+            "id": "01JAFWWGP7914BP5H6F9Y4ZN53",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_13_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 13 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:47.850144+00:00",
+        "last_reported": "2024-10-18T13:25:47.850144+00:00",
+        "last_updated": "2024-10-18T13:25:47.850144+00:00",
+        "context": {
+            "id": "01JAFWWGPA1BR4ZSWN3JZJVYN2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_14_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 14 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:47.850800+00:00",
+        "last_reported": "2024-10-18T13:25:47.850800+00:00",
+        "last_updated": "2024-10-18T13:25:47.850800+00:00",
+        "context": {
+            "id": "01JAFWWGPAP3VH5D7GNF08B64C",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_14_last_seen",
+        "state": "2025-01-20T21:30:05+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 14 Last seen"
+        },
+        "last_changed": "2025-01-20T21:30:05.237493+00:00",
+        "last_reported": "2025-01-20T21:30:05.488899+00:00",
+        "last_updated": "2025-01-20T21:30:05.237493+00:00",
+        "context": {
+            "id": "01JJ2SYV1NYGQ31EPSJ688TH9V",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_15_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.195803+00:00",
+        "last_reported": "2024-10-18T13:56:29.122320+00:00",
+        "last_updated": "2024-10-18T13:56:29.122320+00:00",
+        "context": {
+            "id": "01JAFYMPT20M3HR317X0R1C89C",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_15_last_seen",
+        "state": "2025-01-20T21:54:29+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Smart Motion Sensor Last seen"
+        },
+        "last_changed": "2025-01-20T21:54:29.077132+00:00",
+        "last_reported": "2025-01-20T21:54:29.332344+00:00",
+        "last_updated": "2025-01-20T21:54:29.077132+00:00",
+        "context": {
+            "id": "01JJ2VBGJNH1WV6GA881KK34F9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.197389+00:00",
+        "last_reported": "2024-10-18T13:25:48.197389+00:00",
+        "last_updated": "2024-10-18T13:25:48.197389+00:00",
+        "context": {
+            "id": "01JAFWWH15ZAHHMV2NGFTS56MB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_motion_sensor_last_seen",
+        "state": "2025-01-20T22:21:45+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Smart Motion Sensor Last seen"
+        },
+        "last_changed": "2025-01-20T22:21:45.940687+00:00",
+        "last_reported": "2025-01-20T22:21:46.198146+00:00",
+        "last_updated": "2025-01-20T22:21:45.940687+00:00",
+        "context": {
+            "id": "01JJ2WXF2M1S6HWW68E16ZH7BT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_ping_2",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.199682+00:00",
+        "last_reported": "2024-10-18T13:25:48.199682+00:00",
+        "last_updated": "2024-10-18T13:25:48.199682+00:00",
+        "context": {
+            "id": "01JAFWWH17WHXF46E6M5W4ZWXV",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_motion_sensor_last_seen_2",
+        "state": "2025-01-20T20:19:21+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Smart Motion Sensor Last seen"
+        },
+        "last_changed": "2025-01-20T20:19:21.782549+00:00",
+        "last_reported": "2025-01-20T20:19:22.033451+00:00",
+        "last_updated": "2025-01-20T20:19:21.782549+00:00",
+        "context": {
+            "id": "01JJ2NXB1PN71GK3AHWX7NE7MG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_18_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Door Sensor Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.202790+00:00",
+        "last_reported": "2024-10-18T15:50:52.106543+00:00",
+        "last_updated": "2024-10-18T15:50:52.106543+00:00",
+        "context": {
+            "id": "01JAG564YA4ZZ6WB7YKF6M47HF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_18_last_seen",
+        "state": "2025-01-20T20:12:23+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Smart Door Sensor Last seen"
+        },
+        "last_changed": "2025-01-20T20:12:23.341276+00:00",
+        "last_reported": "2025-01-20T20:12:23.592460+00:00",
+        "last_updated": "2025-01-20T20:12:23.341276+00:00",
+        "context": {
+            "id": "01JJ2NGJDDJ6EH50GPSJVQZS72",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_19_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 19 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.204201+00:00",
+        "last_reported": "2024-10-18T13:25:48.204201+00:00",
+        "last_updated": "2024-10-18T13:25:48.204201+00:00",
+        "context": {
+            "id": "01JAFWWH1CWADYPVENP5AAN2J8",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_19_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 19 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:48.205184+00:00",
+        "last_reported": "2024-10-18T13:25:48.205184+00:00",
+        "last_updated": "2024-10-18T13:25:48.205184+00:00",
+        "context": {
+            "id": "01JAFWWH1DRPSZFVQD568G6X2V",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_metering_plug_ping_2",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Metering Plug Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.205783+00:00",
+        "last_reported": "2024-10-18T13:25:48.205783+00:00",
+        "last_updated": "2024-10-18T13:25:48.205783+00:00",
+        "context": {
+            "id": "01JAFWWH1D17JRZ6VTATFPRADA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_metering_plug_last_seen_2",
+        "state": "2024-10-27T16:58:48+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Smart Metering Plug Last seen"
+        },
+        "last_changed": "2024-10-27T16:58:48.922748+00:00",
+        "last_reported": "2024-10-27T16:58:49.182008+00:00",
+        "last_updated": "2024-10-27T16:58:48.922748+00:00",
+        "context": {
+            "id": "01JB7EN16T4NN0DFRSJ8G50R7E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_22_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 22 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.209861+00:00",
+        "last_reported": "2024-10-18T13:25:48.209861+00:00",
+        "last_updated": "2024-10-18T13:25:48.209861+00:00",
+        "context": {
+            "id": "01JAFWWH1H6T399TZ5W2S3CYAS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_22_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 22 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:48.210674+00:00",
+        "last_reported": "2024-10-18T13:25:48.210674+00:00",
+        "last_updated": "2024-10-18T13:25:48.210674+00:00",
+        "context": {
+            "id": "01JAFWWH1JG079E52QY6QEHVSF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_23_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 23 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.211461+00:00",
+        "last_reported": "2024-10-18T13:25:48.211461+00:00",
+        "last_updated": "2024-10-18T13:25:48.211461+00:00",
+        "context": {
+            "id": "01JAFWWH1KTAZ602F074CY9BYN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_23_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 23 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:48.212554+00:00",
+        "last_reported": "2024-10-18T13:25:48.212554+00:00",
+        "last_updated": "2024-10-18T13:25:48.212554+00:00",
+        "context": {
+            "id": "01JAFWWH1MH0FR3K8DZKQRWC7K",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.node_24_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Node 24 Ping"
+        },
+        "last_changed": "2024-10-18T13:25:48.213161+00:00",
+        "last_reported": "2024-10-18T13:25:48.213161+00:00",
+        "last_updated": "2024-10-18T13:25:48.213161+00:00",
+        "context": {
+            "id": "01JAFWWH1N0WFVXNHPRMMR2G16",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.node_24_last_seen",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Node 24 Last seen"
+        },
+        "last_changed": "2024-10-18T13:25:48.213963+00:00",
+        "last_reported": "2024-10-18T13:25:48.213963+00:00",
+        "last_updated": "2024-10-18T13:25:48.213963+00:00",
+        "context": {
+            "id": "01JAFWWH1NYEFX6Z1FH2KQKGPC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_idle_home_security_cover_status",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Idle Home Security Cover status"
+        },
+        "last_changed": "2024-10-18T13:25:48.218064+00:00",
+        "last_reported": "2024-10-18T13:25:48.218064+00:00",
+        "last_updated": "2024-10-18T13:25:48.218064+00:00",
+        "context": {
+            "id": "01JAFWWH1T862KA57CSF8ZDJM0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_idle_home_security_motion_sensor_status",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Idle Home Security Motion sensor status"
+        },
+        "last_changed": "2024-10-18T13:25:48.218956+00:00",
+        "last_reported": "2024-10-18T13:25:48.218956+00:00",
+        "last_updated": "2024-10-18T13:25:48.218956+00:00",
+        "context": {
+            "id": "01JAFWWH1THFEDP1TXSX44Y221",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_motion_sensor_battery_level",
+        "state": "25.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Smart Motion Sensor Battery level"
+        },
+        "last_changed": "2025-01-20T22:21:42.922939+00:00",
+        "last_reported": "2025-01-20T22:21:42.922939+00:00",
+        "last_updated": "2025-01-20T22:21:42.922939+00:00",
+        "context": {
+            "id": "01JJ2WXC4AS0PQCKAX34VMAMP7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_idle_home_security_cover_status_2",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Idle Home Security Cover status"
+        },
+        "last_changed": "2024-10-18T13:25:48.222681+00:00",
+        "last_reported": "2024-10-18T13:25:48.222681+00:00",
+        "last_updated": "2024-10-18T13:25:48.222681+00:00",
+        "context": {
+            "id": "01JAFWWH1YEYCXNMY0FDQ0J7NM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_idle_home_security_motion_sensor_status_2",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Idle Home Security Motion sensor status"
+        },
+        "last_changed": "2024-10-18T13:25:48.223712+00:00",
+        "last_reported": "2024-10-18T13:25:48.223712+00:00",
+        "last_updated": "2024-10-18T13:25:48.223712+00:00",
+        "context": {
+            "id": "01JAFWWH1ZWPQ2BZ67HK36M227",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_motion_sensor_battery_level_2",
+        "state": "65.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Smart Motion Sensor Battery level"
+        },
+        "last_changed": "2025-01-20T20:19:18.766553+00:00",
+        "last_reported": "2025-01-20T20:19:18.766553+00:00",
+        "last_updated": "2025-01-20T20:19:18.766553+00:00",
+        "context": {
+            "id": "01JJ2NX83EYXJQPRMH58V9AW71",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_metering_plug_electric_consumption_kwh_2",
+        "state": "unavailable",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "Smart Metering Plug Electric Consumption [kWh]"
+        },
+        "last_changed": "2024-10-27T23:33:56.691913+00:00",
+        "last_reported": "2024-10-27T23:33:56.691913+00:00",
+        "last_updated": "2024-10-27T23:33:56.691913+00:00",
+        "context": {
+            "id": "01JB858HAK70H4TA9FJZJBR5JV",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_metering_plug_electric_consumption_w_2",
+        "state": "unavailable",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "Smart Metering Plug Electric Consumption [W]"
+        },
+        "last_changed": "2024-10-27T23:33:56.692003+00:00",
+        "last_reported": "2024-10-27T23:33:56.692003+00:00",
+        "last_updated": "2024-10-27T23:33:56.692003+00:00",
+        "context": {
+            "id": "01JB858HAM80EQS1B0SA4P9PF5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.smart_metering_plug_2",
+        "state": "unavailable",
+        "attributes": {
+            "friendly_name": "Smart Metering Plug "
+        },
+        "last_changed": "2024-10-27T23:33:56.691795+00:00",
+        "last_reported": "2024-10-27T23:33:56.691795+00:00",
+        "last_updated": "2024-10-27T23:33:56.691795+00:00",
+        "context": {
+            "id": "01JB858HAKD47N8A67FMBW8ANK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_tampering_product_cover_removed",
+        "state": "off",
+        "attributes": {
+            "device_class": "tamper",
+            "friendly_name": "Smart Motion Sensor Tampering, product cover removed"
+        },
+        "last_changed": "2024-10-18T13:25:48.217361+00:00",
+        "last_reported": "2024-10-18T13:25:48.217361+00:00",
+        "last_updated": "2024-10-18T13:25:48.217361+00:00",
+        "context": {
+            "id": "01JAFWWH1SME03SR00KZNF1SFG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_motion_detection",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion",
+            "friendly_name": "Smart Motion Sensor Motion detection"
+        },
+        "last_changed": "2025-01-20T18:32:31.196953+00:00",
+        "last_reported": "2025-01-20T18:32:31.196953+00:00",
+        "last_updated": "2025-01-20T18:32:31.196953+00:00",
+        "context": {
+            "id": "01JJ2FSPPW03KSWJKYPVVDVF9A",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_low_battery_level",
+        "state": "off",
+        "attributes": {
+            "device_class": "battery",
+            "friendly_name": "Smart Motion Sensor Low battery level"
+        },
+        "last_changed": "2024-10-18T13:25:48.220026+00:00",
+        "last_reported": "2024-10-18T13:25:48.220026+00:00",
+        "last_updated": "2024-10-18T13:25:48.220026+00:00",
+        "context": {
+            "id": "01JAFWWH1WAQFQTK23NCJSDT4J",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_tampering_product_cover_removed_2",
+        "state": "on",
+        "attributes": {
+            "device_class": "tamper",
+            "friendly_name": "Smart Motion Sensor Tampering, product cover removed"
+        },
+        "last_changed": "2024-10-18T13:25:48.221194+00:00",
+        "last_reported": "2024-10-18T13:25:48.221194+00:00",
+        "last_updated": "2024-10-18T13:25:48.221194+00:00",
+        "context": {
+            "id": "01JAFWWH1XJQS1R9H6QFAXQBQ6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_motion_detection_2",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion",
+            "friendly_name": "Smart Motion Sensor Motion detection"
+        },
+        "last_changed": "2024-10-18T13:25:48.223001+00:00",
+        "last_reported": "2024-10-18T13:25:48.223001+00:00",
+        "last_updated": "2024-10-18T13:25:48.223001+00:00",
+        "context": {
+            "id": "01JAFWWH1Z35CBG36QGAHCAW3N",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_low_battery_level_2",
+        "state": "off",
+        "attributes": {
+            "device_class": "battery",
+            "friendly_name": "Smart Motion Sensor Low battery level"
+        },
+        "last_changed": "2024-10-18T13:25:48.224370+00:00",
+        "last_reported": "2024-10-18T13:25:48.224370+00:00",
+        "last_updated": "2024-10-18T13:25:48.224370+00:00",
+        "context": {
+            "id": "01JAFWWH201FREM2228KQZW4GY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.tv1_node_status",
+        "state": "alive",
+        "attributes": {
+            "friendly_name": "TV1 Node status"
+        },
+        "last_changed": "2024-10-18T13:40:57.841357+00:00",
+        "last_reported": "2024-10-18T13:40:57.841680+00:00",
+        "last_updated": "2024-10-18T13:40:57.841357+00:00",
+        "context": {
+            "id": "01JAFXR9BH1RM348JD16QV28N6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.tv1_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "TV1 Ping"
+        },
+        "last_changed": "2024-10-18T13:40:57.842252+00:00",
+        "last_reported": "2024-10-18T13:40:57.842434+00:00",
+        "last_updated": "2024-10-18T13:40:57.842252+00:00",
+        "context": {
+            "id": "01JAFXR9BJS3EH5R63VBYBV7E7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.tv1_last_seen",
+        "state": "2025-01-20T22:44:34+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "TV1 Last seen"
+        },
+        "last_changed": "2025-01-20T22:44:34.402976+00:00",
+        "last_reported": "2025-01-20T22:44:34.658704+00:00",
+        "last_updated": "2025-01-20T22:44:34.402976+00:00",
+        "context": {
+            "id": "01JJ2Y77F27HVHQWZWE3DESNV4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.tv1",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "TV1 "
+        },
+        "last_changed": "2024-10-18T13:41:00.243813+00:00",
+        "last_reported": "2024-10-18T13:41:00.243989+00:00",
+        "last_updated": "2024-10-18T13:41:00.243813+00:00",
+        "context": {
+            "id": "01JAFXRBPKVNSQF3X2Z2E76RC4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.tv1_electric_consumption_kwh",
+        "state": "0.0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "meter_type": 1,
+            "meter_type_name": "ELECTRIC",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "TV1 Electric Consumption [kWh]"
+        },
+        "last_changed": "2025-01-20T22:44:34.408709+00:00",
+        "last_reported": "2025-01-20T22:44:34.408709+00:00",
+        "last_updated": "2025-01-20T22:44:34.408709+00:00",
+        "context": {
+            "id": "01JJ2Y77F86WCTHTVHCWRJBW84",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.tv1_electric_consumption_w",
+        "state": "0.0",
+        "attributes": {
+            "state_class": "measurement",
+            "meter_type": 1,
+            "meter_type_name": "ELECTRIC",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "TV1 Electric Consumption [W]"
+        },
+        "last_changed": "2024-10-18T13:41:00.245561+00:00",
+        "last_reported": "2024-10-18T13:41:00.245561+00:00",
+        "last_updated": "2024-10-18T13:41:00.245561+00:00",
+        "context": {
+            "id": "01JAFXRBPN7PER2KW8TJ94NM01",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_tampering_product_cover_removed_3",
+        "state": "off",
+        "attributes": {
+            "device_class": "tamper",
+            "friendly_name": "Smart Motion Sensor Tampering, product cover removed"
+        },
+        "last_changed": "2024-10-18T13:56:29.127695+00:00",
+        "last_reported": "2024-10-18T13:56:29.127903+00:00",
+        "last_updated": "2024-10-18T13:56:29.127695+00:00",
+        "context": {
+            "id": "01JAFYMPT7HWXQBCF5CGZP7B4H",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_idle_home_security_cover_status_3",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Idle Home Security Cover status"
+        },
+        "last_changed": "2024-10-18T13:56:29.128971+00:00",
+        "last_reported": "2024-10-18T13:56:29.129147+00:00",
+        "last_updated": "2024-10-18T13:56:29.128971+00:00",
+        "context": {
+            "id": "01JAFYMPT8YHB2PB2Q7S7AT9YZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_motion_detection_3",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion",
+            "friendly_name": "Smart Motion Sensor Motion detection"
+        },
+        "last_changed": "2025-01-17T14:37:18.652518+00:00",
+        "last_reported": "2025-01-17T14:37:18.652518+00:00",
+        "last_updated": "2025-01-17T14:37:18.652518+00:00",
+        "context": {
+            "id": "01JHTB4VXWX7BYMV3ERPEVJM30",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_motion_sensor_idle_home_security_motion_sensor_status_3",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Motion Sensor Idle Home Security Motion sensor status"
+        },
+        "last_changed": "2024-10-18T13:56:29.130982+00:00",
+        "last_reported": "2024-10-18T13:56:29.132719+00:00",
+        "last_updated": "2024-10-18T13:56:29.130982+00:00",
+        "context": {
+            "id": "01JAFYMPTA7G6BS7J8T2QPGYF3",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_motion_sensor_battery_level_3",
+        "state": "42.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Smart Motion Sensor Battery level"
+        },
+        "last_changed": "2025-01-20T21:54:26.060415+00:00",
+        "last_reported": "2025-01-20T21:54:26.060415+00:00",
+        "last_updated": "2025-01-20T21:54:26.060415+00:00",
+        "context": {
+            "id": "01JJ2VBDMC30VQE9B8JR54T7DC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_motion_sensor_low_battery_level_3",
+        "state": "off",
+        "attributes": {
+            "device_class": "battery",
+            "friendly_name": "Smart Motion Sensor Low battery level"
+        },
+        "last_changed": "2024-10-18T13:56:29.133980+00:00",
+        "last_reported": "2024-10-18T13:56:29.134117+00:00",
+        "last_updated": "2024-10-18T13:56:29.133980+00:00",
+        "context": {
+            "id": "01JAFYMPTDE3N2QDK21MQBWZ6D",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.motion_sensor_air_temperature",
+        "state": "24.2",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "\u00b0C",
+            "device_class": "temperature",
+            "friendly_name": "Motion Sensor Air temperature"
+        },
+        "last_changed": "2025-01-20T19:18:35.377777+00:00",
+        "last_reported": "2025-01-20T19:18:35.377777+00:00",
+        "last_updated": "2025-01-20T19:18:35.377777+00:00",
+        "context": {
+            "id": "01JJ2JE23HBYDC14HXYPADEB9F",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.motion_sensor_illuminance",
+        "state": "2.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "lx",
+            "device_class": "illuminance",
+            "friendly_name": "Motion Sensor Illuminance"
+        },
+        "last_changed": "2025-01-20T22:11:43.144396+00:00",
+        "last_reported": "2025-01-20T22:11:43.144396+00:00",
+        "last_updated": "2025-01-20T22:11:43.144396+00:00",
+        "context": {
+            "id": "01JJ2WB2D8JA1FJWZKGP8Y1DHA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.motion_sensor_seismic_intensity",
+        "state": "0.0",
+        "attributes": {
+            "friendly_name": "Motion Sensor Seismic Intensity"
+        },
+        "last_changed": "2024-10-18T14:19:16.660749+00:00",
+        "last_reported": "2024-10-18T14:19:16.660749+00:00",
+        "last_updated": "2024-10-18T14:19:16.660749+00:00",
+        "context": {
+            "id": "01JAFZYE9MVM25RMKJXNMEXYT1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.motion_sensor_acceleration_x_axis",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "m/s\u00b2",
+            "friendly_name": "Motion Sensor Acceleration X-axis"
+        },
+        "last_changed": "2024-10-18T14:19:16.661552+00:00",
+        "last_reported": "2024-10-18T14:19:16.661552+00:00",
+        "last_updated": "2024-10-18T14:19:16.661552+00:00",
+        "context": {
+            "id": "01JAFZYE9NMXEHGCAYX7AZF0PQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.motion_sensor_acceleration_y_axis",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "m/s\u00b2",
+            "friendly_name": "Motion Sensor Acceleration Y-axis"
+        },
+        "last_changed": "2024-10-18T14:19:16.662247+00:00",
+        "last_reported": "2024-10-18T14:19:16.662247+00:00",
+        "last_updated": "2024-10-18T14:19:16.662247+00:00",
+        "context": {
+            "id": "01JAFZYE9P5YJ31ZAPTPH2RBR9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.motion_sensor_acceleration_z_axis",
+        "state": "0.0",
+        "attributes": {
+            "unit_of_measurement": "m/s\u00b2",
+            "friendly_name": "Motion Sensor Acceleration Z-axis"
+        },
+        "last_changed": "2024-10-18T14:19:16.662908+00:00",
+        "last_reported": "2024-10-18T14:19:16.662908+00:00",
+        "last_updated": "2024-10-18T14:19:16.662908+00:00",
+        "context": {
+            "id": "01JAFZYE9PMFFKKWDSCYJHZ8JX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.motion_sensor_motion_detection",
+        "state": "off",
+        "attributes": {
+            "device_class": "motion",
+            "friendly_name": "Motion Sensor Motion detection"
+        },
+        "last_changed": "2025-01-17T14:36:24.619370+00:00",
+        "last_reported": "2025-01-17T14:36:24.619370+00:00",
+        "last_updated": "2025-01-17T14:36:24.619370+00:00",
+        "context": {
+            "id": "01JHTB375BED7HGD28FM322BTD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.motion_sensor_idle_home_security_motion_sensor_status",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Motion Sensor Idle Home Security Motion sensor status"
+        },
+        "last_changed": "2024-10-18T14:19:16.668978+00:00",
+        "last_reported": "2024-10-18T14:19:16.669115+00:00",
+        "last_updated": "2024-10-18T14:19:16.668978+00:00",
+        "context": {
+            "id": "01JAFZYE9WSD4D0RZP8XPA1TJF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.motion_sensor_tampering_product_cover_removed",
+        "state": "off",
+        "attributes": {
+            "device_class": "tamper",
+            "friendly_name": "Motion Sensor Tampering, product cover removed"
+        },
+        "last_changed": "2025-01-20T21:30:35.594603+00:00",
+        "last_reported": "2025-01-20T21:30:35.594603+00:00",
+        "last_updated": "2025-01-20T21:30:35.594603+00:00",
+        "context": {
+            "id": "01JJ2SZRPA71GXBX51MJNRXWQ0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.motion_sensor_idle_home_security_cover_status",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Motion Sensor Idle Home Security Cover status"
+        },
+        "last_changed": "2024-10-18T14:19:16.670673+00:00",
+        "last_reported": "2024-10-18T14:19:16.670807+00:00",
+        "last_updated": "2024-10-18T14:19:16.670673+00:00",
+        "context": {
+            "id": "01JAFZYE9YEB76D6HZAWVBS73D",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.motion_sensor_battery_level",
+        "state": "44.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Motion Sensor Battery level"
+        },
+        "last_changed": "2025-01-19T13:05:01.384788+00:00",
+        "last_reported": "2025-01-19T13:05:01.384788+00:00",
+        "last_updated": "2025-01-19T13:05:01.384788+00:00",
+        "context": {
+            "id": "01JHZANAE8J4SG64AZMN4RYFNT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.motion_sensor_low_battery_level",
+        "state": "off",
+        "attributes": {
+            "device_class": "battery",
+            "friendly_name": "Motion Sensor Low battery level"
+        },
+        "last_changed": "2024-10-18T14:19:16.674429+00:00",
+        "last_reported": "2024-10-18T14:19:16.674595+00:00",
+        "last_updated": "2024-10-18T14:19:16.674429+00:00",
+        "context": {
+            "id": "01JAFZYEA29WA91NSKW36KYTVY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.motion_sensor_firmware",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "3.3",
+            "in_progress": false,
+            "latest_version": "3.3",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "device_class": "firmware",
+            "entity_picture": "https://brands.home-assistant.io/_/zwave_js/icon.png",
+            "friendly_name": "Motion Sensor Firmware",
+            "supported_features": 21
+        },
+        "last_changed": "2024-10-18T14:19:16.693171+00:00",
+        "last_reported": "2024-10-18T14:19:16.693357+00:00",
+        "last_updated": "2024-10-18T14:19:16.693171+00:00",
+        "context": {
+            "id": "01JAFZYEANBH7YQF0VSK4BTR2E",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_door_sensor_tampering_product_cover_removed",
+        "state": "off",
+        "attributes": {
+            "device_class": "tamper",
+            "friendly_name": "Smart Door Sensor Tampering, product cover removed"
+        },
+        "last_changed": "2024-10-18T15:50:52.110845+00:00",
+        "last_reported": "2024-10-18T15:50:52.111023+00:00",
+        "last_updated": "2024-10-18T15:50:52.110845+00:00",
+        "context": {
+            "id": "01JAG564YE3HMAY6NK3DCRN429",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.smart_door_sensor_idle_home_security_cover_status",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Smart Door Sensor Idle Home Security Cover status"
+        },
+        "last_changed": "2024-10-18T15:50:52.111979+00:00",
+        "last_reported": "2024-10-18T15:50:52.112129+00:00",
+        "last_updated": "2024-10-18T15:50:52.111979+00:00",
+        "context": {
+            "id": "01JAG564YFXD1Q1TDTNVNMZ8WN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_door_sensor_window_door_is_open",
+        "state": "off",
+        "attributes": {
+            "device_class": "door",
+            "friendly_name": "Smart Door Sensor Window/door is open"
+        },
+        "last_changed": "2024-12-29T17:09:15.271619+00:00",
+        "last_reported": "2024-12-29T17:09:15.271619+00:00",
+        "last_updated": "2024-12-29T17:09:15.271619+00:00",
+        "context": {
+            "id": "01JG9P9DW7FM3JETJT0MERXPS6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_door_sensor_window_door_is_open_in_regular_position",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Smart Door Sensor Window/door is open in regular position"
+        },
+        "last_changed": "2024-10-23T18:26:01.685116+00:00",
+        "last_reported": "2024-10-23T18:26:01.685116+00:00",
+        "last_updated": "2024-10-23T18:26:01.685116+00:00",
+        "context": {
+            "id": "01JAXA1VAN3SW94AAC13V29JBP",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_door_sensor_window_door_is_open_in_tilt_position",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Smart Door Sensor Window/door is open in tilt position"
+        },
+        "last_changed": "2024-10-23T18:26:01.685161+00:00",
+        "last_reported": "2024-10-23T18:26:01.685161+00:00",
+        "last_updated": "2024-10-23T18:26:01.685161+00:00",
+        "context": {
+            "id": "01JAXA1VAN4D0Q7QY7T0GH5D22",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_door_sensor_window_door_is_open_2",
+        "state": "off",
+        "attributes": {
+            "device_class": "door",
+            "friendly_name": "Smart Door Sensor Window/door is open"
+        },
+        "last_changed": "2024-12-29T17:09:15.270327+00:00",
+        "last_reported": "2024-12-29T17:09:15.270327+00:00",
+        "last_updated": "2024-12-29T17:09:15.270327+00:00",
+        "context": {
+            "id": "01JG9P9DW6ET02CVHCK6BGHT48",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.smart_door_sensor_battery_level",
+        "state": "78.0",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "Smart Door Sensor Battery level"
+        },
+        "last_changed": "2025-01-20T20:12:20.326705+00:00",
+        "last_reported": "2025-01-20T20:12:20.326705+00:00",
+        "last_updated": "2025-01-20T20:12:20.326705+00:00",
+        "context": {
+            "id": "01JJ2NGFF69BE5M2DQQNM9YHGC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.smart_door_sensor_low_battery_level",
+        "state": "off",
+        "attributes": {
+            "device_class": "battery",
+            "friendly_name": "Smart Door Sensor Low battery level"
+        },
+        "last_changed": "2024-10-18T15:50:52.118648+00:00",
+        "last_reported": "2024-10-18T15:50:52.118801+00:00",
+        "last_updated": "2024-10-18T15:50:52.118648+00:00",
+        "context": {
+            "id": "01JAG564YPWQGZFRXM1JSTWA38",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.curved_light_serverarea",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Curved light Serverarea "
+        },
+        "last_changed": "2025-01-17T14:36:24.751369+00:00",
+        "last_reported": "2025-01-17T14:36:24.768059+00:00",
+        "last_updated": "2025-01-17T14:36:24.751369+00:00",
+        "context": {
+            "id": "01JHTB36ZMC529H8G95792T5D7",
+            "parent_id": "01JHTB36ZMZTST0ZJHH1SZ7T43",
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_serverarea_electric_consumption_kwh",
+        "state": "33.2",
+        "attributes": {
+            "state_class": "total_increasing",
+            "meter_type": 1,
+            "meter_type_name": "ELECTRIC",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "Curved light Serverarea Electric Consumption [kWh]"
+        },
+        "last_changed": "2025-01-20T22:44:42.479165+00:00",
+        "last_reported": "2025-01-20T22:44:42.479165+00:00",
+        "last_updated": "2025-01-20T22:44:42.479165+00:00",
+        "context": {
+            "id": "01JJ2Y7FBFGSXBQ1BJJFGQ6SWT",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_serverarea_electric_consumption_w",
+        "state": "0.0",
+        "attributes": {
+            "state_class": "measurement",
+            "meter_type": 1,
+            "meter_type_name": "ELECTRIC",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "Curved light Serverarea Electric Consumption [W]"
+        },
+        "last_changed": "2025-01-17T14:36:50.003401+00:00",
+        "last_reported": "2025-01-17T14:36:50.003401+00:00",
+        "last_updated": "2025-01-17T14:36:50.003401+00:00",
+        "context": {
+            "id": "01JHTB3ZYK48YFSK7WH4HNNACZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_serverarea_last_seen",
+        "state": "2025-01-20T22:44:42+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Curved light Serverarea Last seen"
+        },
+        "last_changed": "2025-01-20T22:44:42.471961+00:00",
+        "last_reported": "2025-01-20T22:44:42.720641+00:00",
+        "last_updated": "2025-01-20T22:44:42.471961+00:00",
+        "context": {
+            "id": "01JJ2Y7FB7ZRXMWRCVPBJR94AK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_serverarea_node_status",
+        "state": "alive",
+        "attributes": {
+            "friendly_name": "Curved light Serverarea Node status"
+        },
+        "last_changed": "2024-10-28T09:57:19.628758+00:00",
+        "last_reported": "2024-10-28T09:57:19.628960+00:00",
+        "last_updated": "2024-10-28T09:57:19.628758+00:00",
+        "context": {
+            "id": "01JB98XZMCWX3TSADQZDHWJ7FA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.curved_light_serverarea_ping",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Curved light Serverarea Ping"
+        },
+        "last_changed": "2024-10-28T09:57:19.630540+00:00",
+        "last_reported": "2024-10-28T09:57:19.630540+00:00",
+        "last_updated": "2024-10-28T09:57:19.630540+00:00",
+        "context": {
+            "id": "01JB98XZMETPZVVQN4RB797875",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.curved_light_window_3",
+        "state": "off",
+        "attributes": {
+            "friendly_name": "Curved light Window "
+        },
+        "last_changed": "2025-01-17T14:36:24.517202+00:00",
+        "last_reported": "2025-01-17T14:36:24.530765+00:00",
+        "last_updated": "2025-01-17T14:36:24.517202+00:00",
+        "context": {
+            "id": "01JHTB36ZMC529H8G95792T5D7",
+            "parent_id": "01JHTB36ZMZTST0ZJHH1SZ7T43",
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_window_electric_consumption_kwh_3",
+        "state": "33.0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "meter_type": 1,
+            "meter_type_name": "ELECTRIC",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "Curved light Window Electric Consumption [kWh]"
+        },
+        "last_changed": "2025-01-20T22:45:03.626904+00:00",
+        "last_reported": "2025-01-20T22:45:03.626904+00:00",
+        "last_updated": "2025-01-20T22:45:03.626904+00:00",
+        "context": {
+            "id": "01JJ2Y840A5NKH5657X9TJVNA2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_window_electric_consumption_w_3",
+        "state": "0.0",
+        "attributes": {
+            "state_class": "measurement",
+            "meter_type": 1,
+            "meter_type_name": "ELECTRIC",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "Curved light Window Electric Consumption [W]"
+        },
+        "last_changed": "2025-01-17T14:36:54.695739+00:00",
+        "last_reported": "2025-01-17T14:36:54.695739+00:00",
+        "last_updated": "2025-01-17T14:36:54.695739+00:00",
+        "context": {
+            "id": "01JHTB44H72HQG0X8YG9YJ970B",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_window_last_seen_3",
+        "state": "2025-01-20T22:45:03+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Curved light Window Last seen"
+        },
+        "last_changed": "2025-01-20T22:45:03.622609+00:00",
+        "last_reported": "2025-01-20T22:45:03.877086+00:00",
+        "last_updated": "2025-01-20T22:45:03.622609+00:00",
+        "context": {
+            "id": "01JJ2Y84065RFBMT56P4CA9DZ1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.curved_light_window_node_status_3",
+        "state": "alive",
+        "attributes": {
+            "friendly_name": "Curved light Window Node status"
+        },
+        "last_changed": "2024-10-28T09:57:43.673770+00:00",
+        "last_reported": "2024-10-28T09:57:43.673886+00:00",
+        "last_updated": "2024-10-28T09:57:43.673770+00:00",
+        "context": {
+            "id": "01JB98YQ3SKWQ5DT9E594XHRTJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.curved_light_window_ping_3",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Curved light Window Ping"
+        },
+        "last_changed": "2024-10-28T09:57:43.674807+00:00",
+        "last_reported": "2024-10-28T09:57:43.674807+00:00",
+        "last_updated": "2024-10-28T09:57:43.674807+00:00",
+        "context": {
+            "id": "01JB98YQ3TRGGNX4BPQ3H4ED5X",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.xiaomi_vacuum_map_card_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "installed_version": "v2.2.4",
+            "in_progress": false,
+            "latest_version": "v2.2.4",
+            "release_summary": null,
+            "release_url": "https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card/releases/v2.2.4",
+            "skipped_version": null,
+            "title": null,
+            "friendly_name": "Xiaomi Vacuum Map Card update",
+            "supported_features": 23
+        },
+        "last_changed": "2024-11-29T12:23:46.636921+00:00",
+        "last_reported": "2024-11-29T12:23:46.637416+00:00",
+        "last_updated": "2024-11-29T12:23:46.636921+00:00",
+        "context": {
+            "id": "01JDVY14PC9V5Y6KP6M7GKAWN7",
+            "parent_id": null,
+            "user_id": null
+        }
+    }
+]

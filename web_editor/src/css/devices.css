@@ -1,0 +1,207 @@
+/* Variables de color */
+:root {
+  --main-color: #032530;
+  --accent-color: #4db8b8;
+  --light-color: #f4f4f4;
+  --card-bg-color: #ffffff;
+  --border-radius: 8px;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #ddd;
+}
+
+/* Estilo para el título */
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #032530; /* Color base */
+  text-align: center;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Espaciado entre letras */
+  margin-bottom: 30px;
+  background-image: linear-gradient(135deg, #4db8b8, #f39c12); /* Degradado */
+  -webkit-background-clip: text; /* Cortar el fondo en el texto */
+  color: transparent; /* Hacer el color del texto transparente */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra más notoria */
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  justify-content: flex-start; /* Mueve el contenido a la izquierda */
+  align-items: flex-start; /* Mueve el contenido hacia la parte superior */
+  height: 100vh;
+  padding-top: 50px; /* Espacio para el nav */
+}
+
+/* Contenedor principal */
+.devices-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Filtro de dispositivos */
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.filter-container label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.filter-select {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-color);
+  transition: background-color 0.3s;
+}
+
+.filter-select:hover {
+  background-color: #f2f2f2;
+}
+
+/* Contenedor principal de la tabla y gráficos */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; /* Espacio entre tabla y gráficos */
+  flex-wrap: wrap; /* Permite que se ajusten en dispositivos más pequeños */
+  margin-top: 20px; /* Separación superior */
+}
+
+/* Estilo de la tabla de dispositivos */
+.devices-table {
+  flex: 1; /* La tabla ocupa la mitad del espacio */
+  max-width: 55%; /* Aumentamos el tamaño de la tabla */
+  overflow-x: auto; /* Desplazamiento horizontal si es necesario */
+  height: 540px; /* Aumentamos la altura de la tabla */
+  overflow-y: auto; /* Desplazamiento vertical si la tabla es muy alta */
+  border: 1px solid var(--border-color); /* Borde suave */
+  border-radius: var(--border-radius); /* Bordes redondeados */
+  box-shadow: 0 4px 10px var(--shadow-color); /* Sombra para el efecto de profundidad */
+}
+
+.devices-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.devices-table th,
+.devices-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 250px;
+}
+
+.devices-table th {
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 18px;
+}
+
+.devices-table td {
+  background-color: var(--card-bg-color);
+  color: #333;
+}
+
+.devices-table tr:hover {
+  background-color: var(--accent-color);
+}
+
+.devices-table tr {
+  height: 60px; /* Asegura que cada fila tenga una altura suficiente */
+}
+
+/* Estilos para el contenedor de gráficas */
+.charts-container {
+  flex: 1; /* Ocupa la mitad del espacio */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Separamos los gráficos */
+  height: 500px; /* Altura máxima para los gráficos */
+  overflow-y: auto; /* Permite desplazamiento vertical si las gráficas son muy altas */
+  border: 1px solid var(--border-color); /* Borde suave */
+  border-radius: var(--border-radius); /* Bordes redondeados */
+  box-shadow: 0 4px 10px var(--shadow-color); /* Sombra para el efecto de profundidad */
+  padding: 20px; /* Espacio interno dentro de los gráficos */
+  margin-top: 1px; /* Espacio hacia abajo */
+  justify-content: center; /* Centra los gráficos verticalmente */
+  align-items: center; /* Centra los gráficos horizontalmente */
+}
+
+/* Estilos para cada gráfica */
+.chart {
+  width: 80%; /* Asegura que las gráficas ocupen el 80% del contenedor */
+  height: 250px; /* Ajusta la altura de las gráficas */
+  position: relative;
+  border: 1px solid var(--border-color); /* Borde suave */
+  border-radius: var(--border-radius); /* Bordes redondeados */
+  box-shadow: 0 4px 8px var(--shadow-color); /* Sombra para el efecto de profundidad */
+  background-color: #fff; /* Fondo blanco para los gráficos */
+  margin: 0 auto; /* Centrado automático */
+}
+
+/* Estilos para el gráfico de pastel */
+.pie-chart {
+  margin-top: 20px; /* Separación hacia abajo para el gráfico de pastel */
+  width: 80%; /* Asegura que el gráfico de pastel tenga un tamaño consistente */
+  height: 250px; /* Ajusta la altura para hacerlo más grande */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px var(--shadow-color); /* Sombra sutil para el gráfico */
+}
+
+/* Estilos para el gráfico de barras */
+.bar-chart {
+  width: 80%; /* Asegura que el gráfico de barras tenga el mismo tamaño */
+  height: 250px; /* Ajusta la altura para que coincida con el gráfico de pastel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px var(--shadow-color); /* Sombra sutil para el gráfico */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .devices-table {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .chart-container {
+    flex-direction: column; /* Coloca los gráficos en columna en pantallas más pequeñas */
+    align-items: center; /* Alinea los gráficos al centro */
+  }
+
+  .pie-chart,
+  .bar-chart {
+    width: 90%; /* Los gráficos ocupan un 90% del ancho en pantallas pequeñas */
+    height: 200px; /* Ajusta la altura en pantallas pequeñas */
+  }
+}

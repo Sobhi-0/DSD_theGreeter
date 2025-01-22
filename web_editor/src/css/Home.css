@@ -1,0 +1,57 @@
+/* Home.css */
+body.home-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    background: url('../assets/Ros.gif') no-repeat center center;
+    background-size: cover; /* Ensures the GIF covers the whole page */
+    font-family: Arial, sans-serif; /* Optional: Customize font */
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take full height of the viewport */
+    text-align: center;
+    color: white; /* Optional: Adjust text color */
+}
+
+.home-overlay {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+.home-heading {
+    font-size: 3rem;
+    color: rgba(6, 89, 233, 0.759); /* Blue color for the header */
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide the overflowing text */
+    border-right: 0.15em solid rgb(255, 255, 255); /* Simulate a typing cursor */
+    white-space: nowrap; /* Prevent wrapping */
+    width: 0; /* Start with no width */
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing and blinking effects */
+}
+
+.home-paragraph {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for the blinking cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Make the cursor disappear */
+    }
+}

@@ -3,5 +3,7 @@
 ros_ws/install
 ros_ws/log
 ros_ws/build
+web_editor/node_modules
 ros_ws/compile_commands.json
 home_assistant/data.txt
+main

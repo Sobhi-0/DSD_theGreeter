@@ -1,0 +1,40 @@
+/* Contact.css */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full viewport height */
+    background: #f4f4f9; /* Light background color */
+    font-family: Arial, sans-serif;
+}
+
+.contact-overlay {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+    color: white;
+    border-radius: 10px; /* Optional: rounded corners */
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.contact-heading {
+    font-size: 2.5rem;
+    color: #3498db; /* Blue color for the header */
+    margin-bottom: 20px;
+}
+
+.contact-paragraph {
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: #ecf0f1; /* Light color for paragraphs */
+}
+
+.contact-paragraph a {
+    color: #3498db; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-paragraph a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
